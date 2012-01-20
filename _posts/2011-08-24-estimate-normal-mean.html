@@ -7,7 +7,7 @@ categories: R
 
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">The setup </h2>
+<h2 id="sec-1">The setup</h2>
 <div class="outline-text-2" id="text-1">
 
 <p>When doing statistics the Bayesian way, we are sometimes bombarded with complicated integrals that do not lend themselves to closed-form solutions.  This used to be a problem.  Nowadays, not so much.  This post illustrates how a person can use the Monte Carlo method (and R) to get a good estimate for an integral that might otherwise look unwieldy at first glance.  Of course, in this example, the integral isn't very complicated.  But the <i>method</i> works the same, regardless of the mess in which we find ourselves.  The current example is derived from one in <a href="http://www.springer.com/statistics/statistical+theory+and+methods/book/978-0-387-21239-5">Monte Carlo Statistical Methods</a> by Robert/Casella (in Chapter 4).  For that matter, check out their <a href="http://www.springer.com/statistics/computanional+statistics/book/978-1-4419-1575-7">Introducing Monte Carlo Methods with R</a>.
@@ -71,7 +71,7 @@ The <a href="http://en.wikipedia.org/wiki/Strong_Law_of_Small_Numbers">Strong La
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">How to do it with R </h2>
+<h2 id="sec-2">How to do it with R</h2>
 <div class="outline-text-2" id="text-2">
 
 <p>The following is an R script which does the above.  For laughs, let's suppose that we observed \(X=3\).
@@ -79,21 +79,18 @@ The <a href="http://en.wikipedia.org/wiki/Strong_Law_of_Small_Numbers">Strong La
 
 
 
-<pre class="example"># cauchyprior.R
-set.seed(1)           # makes the experiment reproducible
-m &lt;- 2000             # number of simulated values
-x &lt;- 3                # observed data
+<pre class="src src-R"><span style="color: #b22222;"># </span><span style="color: #b22222;">cauchyprior.R</span>
+set.seed(1)           <span style="color: #b22222;"># </span><span style="color: #b22222;">makes the experiment reproducible</span>
+m <span style="color: #008b8b;">&lt;-</span> 2000             <span style="color: #b22222;"># </span><span style="color: #b22222;">number of simulated values</span>
+x <span style="color: #008b8b;">&lt;-</span> 3                <span style="color: #b22222;"># </span><span style="color: #b22222;">observed data</span>
 
-# Now simulate some random variables
-theta &lt;- rcauchy(m)                  # simulate m standard Cauchys
-h &lt;- pi * exp(-0.5*(x - theta)^2)    # who wants to write this over and over
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Now simulate some random variables</span>
+theta <span style="color: #008b8b;">&lt;-</span> rcauchy(m)                  <span style="color: #b22222;"># </span><span style="color: #b22222;">simulate m standard Cauchys</span>
+h <span style="color: #008b8b;">&lt;-</span> pi * exp(-0.5*(x - theta)^2)    <span style="color: #b22222;"># </span><span style="color: #b22222;">who wants to write this over and over</span>
 
-Constant &lt;- mean(h)                  # estimate normalizing constant
-post.mean &lt;- mean(theta * h)/mean(h)   # estimate posterior mean
-
+Constant <span style="color: #008b8b;">&lt;-</span> mean(h)                  <span style="color: #b22222;"># </span><span style="color: #b22222;">estimate normalizing constant</span>
+post.mean <span style="color: #008b8b;">&lt;-</span> mean(theta * h)/mean(h)   <span style="color: #b22222;"># </span><span style="color: #b22222;">estimate posterior mean</span>
 </pre>
-
-
 
 
 
@@ -102,25 +99,17 @@ post.mean &lt;- mean(theta * h)/mean(h)   # estimate posterior mean
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">At the command prompt </h2>
+<h2 id="sec-3">At the command prompt</h2>
 <div class="outline-text-2" id="text-3">
 
 <p>After copy-pasting the above into an R session we can see what the results were with an additional
 </p>
 
 
-<pre class="example">Constant
+<pre class="src src-R">Constant
 post.mean
-
 </pre>
 
-
-
-
-<pre class="example">
-[1] 0.3724711
-[1] 2.334232
-</pre>
 
 
 <p>
@@ -128,17 +117,10 @@ For this simple example we can actually calculate what the true values are (to m
 </p>
 
 
-<pre class="example">f &lt;- function(x) exp(-0.5*(x - 3)^2)/(1 + x^2)  
-integrate(f, -Inf, Inf)                    
-
+<pre class="src src-R"><span style="color: #0000ff;">f</span> <span style="color: #008b8b;">&lt;-</span> <span style="color: #a020f0;">function</span>(x) exp(-0.5*(x - 3)^2)/(1 + x^2)  
+integrate(f, -<span style="color: #228b22;">Inf</span>, <span style="color: #228b22;">Inf</span>)                    
 </pre>
 
-
-
-
-<pre class="example">
-0.3416549 with absolute error &lt; 1.3e-07
-</pre>
 
 
 <p>
@@ -146,17 +128,10 @@ so our estimate of \(C\) overshot the mark by about 0.03, and in the posterior m
 </p>
 
 
-<pre class="example">g &lt;- function(x) x * f(x)  
-integrate(g, -Inf, Inf)$value / integrate(f, -Inf, Inf)$value
-
+<pre class="src src-R"><span style="color: #0000ff;">g</span> <span style="color: #008b8b;">&lt;-</span> <span style="color: #a020f0;">function</span>(x) x * f(x)  
+integrate(g, -<span style="color: #228b22;">Inf</span>, <span style="color: #228b22;">Inf</span>)$value / integrate(f, -<span style="color: #228b22;">Inf</span>, <span style="color: #228b22;">Inf</span>)$value
 </pre>
 
-
-
-
-<pre class="example">
-[1] 2.285139
-</pre>
 
 
 <p>
@@ -167,7 +142,7 @@ so our estimate of the posterior mean was around 0.05 too high.  If we would lik
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Are we waiting long enough? </h2>
+<h2 id="sec-4">Are we waiting long enough?</h2>
 <div class="outline-text-2" id="text-4">
 
 <p>Our estimates were a little bit off; we might like to take a look at a plot to see how we're doing &ndash; is this thing really converging like we'd expect?  We can look at a running average plot to assess convergence. If the plot bounces around indeterminably, that's bad, but if it settles down to a finite constant, that's better.  Here's a quick way to check this out with base graphics.
@@ -175,12 +150,9 @@ so our estimate of the posterior mean was around 0.05 too high.  If we would lik
 
 
 
-<pre class="example">rc &lt;- cumsum(h)/seq_along(h)        # running mean of C
-rpm &lt;- cumsum(h * theta)/cumsum(h)  # running posterior mean
-
+<pre class="src src-R">rc <span style="color: #008b8b;">&lt;-</span> cumsum(h)/seq_along(h)        <span style="color: #b22222;"># </span><span style="color: #b22222;">running mean of C</span>
+rpm <span style="color: #008b8b;">&lt;-</span> cumsum(h * theta)/cumsum(h)  <span style="color: #b22222;"># </span><span style="color: #b22222;">running posterior mean</span>
 </pre>
-
-
 
 
 <p>
@@ -189,21 +161,26 @@ Now we plot the results.
 
 
 
-<pre class="example">par(mfrow = c(1,2))
-plot(3:200, rpm[3:200], type = "l", ylim = c(0, 2.7), main = "First 200")
-lines(3:200, rc[3:200], type = "l")
-plot(1:m, rpm, type = "l", ylim = c(0, 2.7), main = "All 2000")
-lines(1:m, rc, type = "l")
-par(mfrow = c(1,1))
-
+<pre class="src src-R">A <span style="color: #008b8b;">&lt;-</span> data.frame(iter = 1:m, rc = rc, rpm=rpm)
+<span style="color: #008b8b;">library</span>(reshape)
+A.short <span style="color: #008b8b;">&lt;-</span> melt(A[3:200, ], id=<span style="color: #8b2252;">"iter"</span>)
+a <span style="color: #008b8b;">&lt;-</span> ggplot(A.short, aes(iter, value, colour=variable)) + geom_line() +
+      opts(title = <span style="color: #8b2252;">"First 200"</span>)
+A.long <span style="color: #008b8b;">&lt;-</span> melt(A, id=<span style="color: #8b2252;">"iter"</span>)
+b <span style="color: #008b8b;">&lt;-</span> ggplot(A.long, aes(iter, value, colour=variable)) + geom_line() +
+      opts(title = <span style="color: #8b2252;">"All 2000 iterations"</span>)
+grid.newpage()
+pushViewport(viewport(layout = grid.layout(1, 2, widths = unit(c(3,5),<span style="color: #8b2252;">"null"</span>))))
+<span style="color: #0000ff;">vplayout</span> <span style="color: #008b8b;">&lt;-</span> <span style="color: #a020f0;">function</span>(x, y)
+viewport(layout.pos.row = x, layout.pos.col = y)
+print(a, vp = vplayout(1, 1))
+print(b, vp = vplayout(1, 2))
 </pre>
 
 
 
-
-
 <div id="fig-yplot" class="figure">
-<p><img src="/images/110824.png"  alt="/images/110824.png" /></p>
+<p><img src="../images/110824.png"  alt="../images/110824.png" /></p>
 <p>Running averages for assessing convergence of the estimators</p>
 </div>
 
@@ -216,7 +193,7 @@ In this example, the estimates look to be still unstable at around <code>m = 200
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">Other approaches </h2>
+<h2 id="sec-5">Other approaches</h2>
 <div class="outline-text-2" id="text-5">
 
 <p>When we were looking to estimate \(C\) we noticed that the integrand was <i>something</i> times a Cauchy distribution.  If we look again, we can see that the same integrand also looks like a <i>normal</i> distribution times <i>something</i>. So, another approach would be to simulate a bunch of normals and average the new <i>somethings</i>.  Do we get the same answer (in the limit)?
@@ -229,7 +206,7 @@ Yes, of course. It turns out, the approach simulating normals does a little bit 
 </div>
 
 <div id="outline-container-6" class="outline-2">
-<h2 id="sec-6">Where to find more&hellip; </h2>
+<h2 id="sec-6">Where to find more&hellip;</h2>
 <div class="outline-text-2" id="text-6">
 
 
