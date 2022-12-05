@@ -148,7 +148,7 @@ Standard practice is to shoot for a power of around $\beta = 0.80$, so our power
 
 | `nPerGroup` | Power (estimate) | SE (approx) |
 |-------------|------------------|-------------|
-| 10          | 0.372            | 0.022       |
+| 10          | 0.346            | 0.021       |
 | 20          | 0.686            | 0.021       |
 | 30          | 0.886            | 0.014       |
 
