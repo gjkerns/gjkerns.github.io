@@ -18,7 +18,7 @@
     "href": "posts/2011-08-23-maiden/index.html",
     "title": "Maiden Voyage",
     "section": "",
-    "text": "The bottom line: with this setup I can effortlessly do R code like this:\n\nrnorm(10)\n\n [1] -0.8417498  1.5661733  1.4517939  0.8075502 -1.3006587  1.4853693\n [7]  0.0157239  1.1162398  1.4359540 -1.3781027\n\n\nAnd can include plots like this:\n\nx = rnorm(100) \ny = rnorm(100)\nplot(y ~ x)\n\n\n\n\nFigure 1: A plot to get things started.\n\n\n\n\nall housed inside a simple, dynamic text file that I can edit with Emacs and can version-control with git. On top of all this, I get LaTeX formatting in HTML via MathJax. Life is good."
+    "text": "Me. I’m an associate professor of Statistics at Youngstown State University in Youngstown, Ohio, USA. I’ve been using R for about 7 years, Emacs about 3 years, git about 1 year, and Org-Mode for less than a year."
   },
   {
     "objectID": "posts/2011-08-27-estimate-normal-mean/index.html",
@@ -110,5 +110,26 @@
     "title": "Power and Sample Size for Repeated Measures ANOVA with R",
     "section": "References",
     "text": "References\n\nSee this question on CrossValidated which came up while I was working on this document (I might not have answered so quickly otherwise). Thanks to all who contributed to that discussion.\nConditions Under Which Mean Square Ratios in Repeated Measurements Designs Have Exact F-Distributions. Huynh Huynh and Leonard S. Feldt, Journal of the American Statistical Association, Vol. 65, No. 332 (Dec., 1970), pp. 1582-1589, stable link.\nI found this website while preparing for the initial meeting and got some inspiration from the discussion near the middle.\nThere are several papers on Russell Lenth’s webpage which are good reading.\nI also like this paper. Keselman, H. J., Algina, J. and Kowalchuk, R. K. (2001), The analysis of repeated measures designs: A review. British Journal of Mathematical and Statistical Psychology, 54: 1–20. doi: 10.1348/000711001159357\nMany of the concepts above are explained more formally in my Statistical Computing course which you can get on GitHub.\nTo learn more about Monte Carlo methods with R I recommend Introducing Monte Carlo Methods with R by Robert and Casella. I also like Statistical Computing with R by Rizzo which has a section about simulating power of statistical tests.\nFor the record, here is my sessionInfo.\n\n\nsessionInfo()\n\nR version 4.2.2 (2022-10-31 ucrt)\nPlatform: x86_64-w64-mingw32/x64 (64-bit)\nRunning under: Windows 10 x64 (build 19044)\n\nMatrix products: default\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\nattached base packages:\n[1] stats     graphics  grDevices datasets  utils     methods   base     \n\nother attached packages:\n[1] MASS_7.3-58.1\n\nloaded via a namespace (and not attached):\n [1] digest_0.6.30   lifecycle_1.0.3 jsonlite_1.8.3  magrittr_2.0.3 \n [5] evaluate_0.18   rlang_1.0.6     stringi_1.7.8   cli_3.4.1      \n [9] renv_0.16.0     vctrs_0.5.1     rmarkdown_2.18  tools_4.2.2    \n[13] stringr_1.5.0   glue_1.6.2      xfun_0.35       yaml_2.3.6     \n[17] fastmap_1.1.0   compiler_4.2.2  htmltools_0.5.3 knitr_1.41"
+  },
+  {
+    "objectID": "posts/2011-08-23-maiden/index.html#what",
+    "href": "posts/2011-08-23-maiden/index.html#what",
+    "title": "Maiden Voyage",
+    "section": "What",
+    "text": "What\nI want this blog to be about statistics, plain and sample. No frills, no tomfoolery, just bare-boned statistics from beginning to end. Plus Emacs, ESS, Org-Mode, and R, but that goes without saying."
+  },
+  {
+    "objectID": "posts/2011-08-23-maiden/index.html#when",
+    "href": "posts/2011-08-23-maiden/index.html#when",
+    "title": "Maiden Voyage",
+    "section": "When",
+    "text": "When\nI’ve wanted to do this for a long time, but had as of yet convinced myself that I didn’t have time for it. A sabbatical coupled with the renewed energy of a use R! conference can change things considerably."
+  },
+  {
+    "objectID": "posts/2011-08-23-maiden/index.html#how-emacs-org-mode-jekyll-github-blog-r",
+    "href": "posts/2011-08-23-maiden/index.html#how-emacs-org-mode-jekyll-github-blog-r",
+    "title": "Maiden Voyage",
+    "section": "How: Emacs + Org mode + Jekyll + Github = Blog + R!",
+    "text": "How: Emacs + Org mode + Jekyll + Github = Blog + R!\nAfter much fiddling and googling I have managed to figure out how to run a blog entirely through Emacs and Git. If you’d like to do the same I recommend reading here and here, with liberal doses of this and that. Ultimately, if you’d like to know how I do it then you can find the org-mode source code for this blog here and you can download the final result here (which still is source code but is as close to final as possible).\nThe bottom line: with this setup I can effortlessly do R code like this:\n\nrnorm(10)\n\n [1] -0.639241176 -0.125379364  0.380696317  0.520658783  0.748436786\n [6] -2.022139962  0.002782247  1.183300638 -0.366611392 -0.617332471\n\n\nAnd can include plots like this:\n\nx = rnorm(100) \ny = rnorm(100)\nplot(y ~ x)\n\n\n\n\nFigure 1: A plot to get things started.\n\n\n\n\nall housed inside a simple, dynamic text file that I can edit with Emacs and can version-control with git. On top of all this, I get LaTeX formatting in HTML via MathJax. Life is good."
   }
 ]
