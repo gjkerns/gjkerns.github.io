@@ -14,8 +14,10 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/gjkerns
-      - icon: twitter
-        href: https://twitter.com/gkerns
+      - icon: linkedin
+        href: https://www.linkedin.com/in/g-jay-kerns-9ab99111/
+      - icon: mastodon
+        href: "https://mathstodon.xyz/@gjkerns"
 format:
   html:
     theme: 
