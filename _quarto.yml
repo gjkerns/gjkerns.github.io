@@ -5,6 +5,10 @@ project:
 website:
   title: "Statistics, plain and sample"
   site-url: "https://gjkerns.github.io"
+  twitter-card: 
+    creator: "@gkerns"
+  open-graph: true
+  page-footer: "Copyright 2022, G. Jay Kerns"
   navbar:
     right:
       - about.qmd
@@ -14,7 +18,9 @@ website:
         href: https://twitter.com/gkerns
 format:
   html:
-    theme: simplex
+    theme: 
+      light: simplex
+      dark: darkly
     css: styles.css
 
 editor: visual

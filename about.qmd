@@ -15,7 +15,7 @@ about:
       href: https://github.com/gjkerns
     - icon: github
       text: Mastodon
-      href: https://mathstodon.xyz/@gjkerns
+      href: "https://mathstodon.xyz/@gjkerns"
 ---
 
-This is a blog written by [me](https://gkerns.people.ysu.edu/).  It isn't meant as a political platform, personal diary, or much of anything more than my prattling on about topics that interest me in statistics, data science, and data analytics.
+This is a blog written by [me](https://gkerns.people.ysu.edu/). It isn't meant as a political platform, personal diary, or much of anything other than my prattling on about topics that interest me in statistics, data science, and data analytics.
