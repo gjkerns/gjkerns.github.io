@@ -370,7 +370,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <pre><code>[1] 0.346</code></pre>
 </div>
 </div>
-<p>Whoa! The power is 0.372? That’s pretty low. We recall that this is just an <em>estimate</em> of power - how precise is the estimate? The standard error of <span class="math inline">\(\hat{p}\)</span> is approximately <span class="math inline">\(\sqrt{\hat{p}(1-\hat{p})/n}\)</span>, so in our case, our estimate’s standard error is approximately 0.022. That means we are approximately 95% confident that the true power at this particular alternative is covered by the interval <span class="math inline">\([0.329,0.415]\)</span>.</p>
+<p>Whoa! The power is 0.346? That’s pretty low. We recall that this is just an <em>estimate</em> of power - how precise is the estimate? The standard error of <span class="math inline">\(\hat{p}\)</span> is approximately <span class="math inline">\(\sqrt{\hat{p}(1-\hat{p})/n}\)</span>, so in our case, our estimate’s standard error is approximately 0.021. That means we are approximately 95% confident that the true power at this particular alternative is covered by the interval <span class="math inline">\([0.303,0.389]\)</span>.</p>
 <p>Standard practice is to shoot for a power of around <span class="math inline">\(\beta = 0.80\)</span>, so our power isn’t even close to what we’d need. We can increase power by increasing sample size (the parameter <code>nPerGroup</code>). A larger sample size means a longer time needed to run the simulation. Below are some results of running the above script at assorted sample sizes.</p>
 <table class="table">
 <thead>

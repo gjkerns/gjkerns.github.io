@@ -7,7 +7,6 @@ categories: [R, code, Classical]
 image: "interaction.png"
 ---
 
-
 ## Background
 
 One of my colleagues is an academic physical therapist (PT), and he's working on a paper to his colleagues related to power, sample size, and navigating the thicket of trouble that surrounds those two things. We recently got together to walk through some of the issues, and I thought I would share some of the wildlife we observed along the way. If you just want the code and don't care about the harangue, see [this gist on GitHub](https://gist.github.com/1608265).
@@ -22,18 +21,17 @@ Now comes the question: how many people should you recruit for your study? The a
 
 I encounter some variant of this question a lot. I used to go look for research papers where somebody's worked out the *F*-test and sample sizes required, and pore over tables and tables. Then I resorted to online calculators (the proprietary versions were too expensive for my department!), which are fine, but they all use different notation and it takes a lot of time poring through documentation (which is often poor, pardon the pun) to recall how it works. And I was never really sure whether I'd got it right, or if I had screwed up with a parameter somewhere.
 
-Some of the calculators advertise *Cohen's effect sizes*, which are usually stated something like "small", "medium", and "large", with accompanying numerical values. [Russell Lenth](http://www.stat.uiowa.edu/\~rlenth/Power/) calls these "T-shirt effect sizes". I agree with him.
+Some of the calculators advertise *Cohen's effect sizes*, which are usually stated something like "small", "medium", and "large", with accompanying numerical values. [Russell Lenth](http://www.stat.uiowa.edu/~rlenth/Power/) calls these "T-shirt effect sizes". I agree with him.
 
 Nowadays the fashionable people say, "Just run a simulation and estimate the power," but the available materials online are scantly detailed. So my buddy and I worked it all out from start to finish for this simple example, in the hopes that by sharing this information people can get a better idea of how to do it the *right* way, the *first* time.
 
-
 ## How to attack it
 
-**The avenue of attack is simple:** for a given sample size, 
+**The avenue of attack is simple:** for a given sample size,
 
-1. use prior research and practitioner experience to decide what difference would be "meaningful" to detect, 
-2. simulate data consistent with the above difference and run the desired statistical test to see whether or not it rejected, and 
-3. repeat step 2 hundreds of times. An estimate of the power (for that sample size) is the proportion of times that the test rejected.
+1.  use prior research and practitioner experience to decide what difference would be "meaningful" to detect,
+2.  simulate data consistent with the above difference and run the desired statistical test to see whether or not it rejected, and
+3.  repeat step 2 hundreds of times. An estimate of the power (for that sample size) is the proportion of times that the test rejected.
 
 If the power isn't high enough, then increase the given sample size and start over. The value we get is just an *estimate* of the power, but we can increase the precision of our estimate by increasing the number of repetitions in step 3.
 
@@ -47,8 +45,8 @@ As a first step, the PT sat down and filled in the following table.
 
 |       | 0 hrs | 15 min | 48 hrs | 96 hrs |
 |-------|-------|--------|--------|--------|
-| Treat | 37 | 32 | 20 | 15 |
-| Sham  | 37 | 32 | 25 | 22 |
+| Treat | 37    | 32     | 20     | 15     |
+| Sham  | 37    | 32     | 25     | 22     |
 
 All of the entries in the above table represent population mean NDI scores for people in the respective groups at the respective measurement times, and were filled in based on prior research and educated guesses by the PT. It was known from other studies that NDI scores have a standard deviation of around 12, and those have been observed to decrease over time.
 
@@ -71,7 +69,6 @@ stdiff    <- 9
 nSim      <- 500
 ```
 
-
 All of the above should be self-explanatory. Next comes setting up the data - creatively named `theData` - for the independent variables. Just for the sake of argument I used code to generate the data frame, but we wouldn't have had to. We could have imported an external text file had we wished.
 
 ```{r}
@@ -84,7 +81,6 @@ names(theData) <- c("Time", "Subject")
 tmp <- rep(c("Treat", "Sham"), each = nPerGroup * nTime)
 theData$Method <- factor(tmp)
 ```
-
 
 Again, the above should be self-explanatory for the most part. The data are in "long" form, where each subject appears over multiple rows. In fact, let's take a look at the data frame to make sure it looks right.
 
@@ -101,7 +97,6 @@ A <- stdevs^2 %o% ones
 B <- (A + t(A) + (stdiff^2)*(diag(nTime) - ones %o% ones))/2
 ```
 
-
 We simulate with the `mvrnorm` function from the `MASS` package.
 
 ```{r}
@@ -111,14 +106,12 @@ tmp2 <- mvrnorm(nPerGroup, mu = muSham, Sigma = B)
 theData$NDI <- c(as.vector(t(tmp1)), as.vector(t(tmp2)))
 ```
 
-
 Now that we have our data, we can run the test:
 
 ```{r}
 aovComp <- aov(NDI ~ Time*Method + Error(Subject/Time), theData)
 summary(aovComp)
 ```
-
 
 Terrific! For these data, we observe a highly significant `Time` effect (this should be obvious given our table above), an insignificant `Method` fixed effect, and an insignificant `Time:Method` interaction. If we think about our model and what we're interested in, it's the interaction which we care about and that which we'd like to detect. If our significance level had been $\alpha = 0.05$, we would not have rejected this time, but who knows what would happen next time.
 
@@ -149,63 +142,62 @@ and finally do the repeating:
 mean(replicate(nSim, runTest()))
 ```
 
-
-Whoa! The power is 0.372? That's pretty low. We recall that this is just an *estimate* of power - how precise is the estimate? The standard error of $\hat{p}$ is approximately $\sqrt{\hat{p}(1-\hat{p})/n}$, so in our case, our estimate's standard error is approximately 0.022. That means we are approximately 95% confident that the true power at this particular alternative is covered by the interval $[0.329,0.415]$.
+Whoa! The power is 0.346? That's pretty low. We recall that this is just an *estimate* of power - how precise is the estimate? The standard error of $\hat{p}$ is approximately $\sqrt{\hat{p}(1-\hat{p})/n}$, so in our case, our estimate's standard error is approximately 0.021. That means we are approximately 95% confident that the true power at this particular alternative is covered by the interval $[0.303,0.389]$.
 
 Standard practice is to shoot for a power of around $\beta = 0.80$, so our power isn't even close to what we'd need. We can increase power by increasing sample size (the parameter `nPerGroup`). A larger sample size means a longer time needed to run the simulation. Below are some results of running the above script at assorted sample sizes.
 
 | `nPerGroup` | Power (estimate) | SE (approx) |
 |-------------|------------------|-------------|
-|          10 | 0.372 | 0.022 |
-|          20 | 0.686 | 0.021 |
-|          30 | 0.886 | 0.014 |
+| 10          | 0.372            | 0.022       |
+| 20          | 0.686            | 0.021       |
+| 30          | 0.886            | 0.014       |
 
 Now we're talking. It looks like somewhere between 20 and 30 subjects per group would be enough to detect the clinically meaningful difference proposed above with a power of 0.80.
 
 Unfortunately, the joke is on us. Because, as it happens, it's no small order for a lone, practicing PT (around here) to snare 60 humans with neck pain for a research study. A person would need to be in (or travel to) a heavily populated area, and even *then* there would be dropout, people not showing up for subsequent appointments.
 
-**So what can we do?** 
+**So what can we do?**
 
-1. **Modify the research details.** If we take a closer look at the table, there isn't an expected difference in the means until 48 hours, so why not measure differently, say, at 0, 48, 96, and 144 hours? Is there something else about the measurement process we could change to decrease the variance? 
-2. **Use a different test.** We are going with boilerplate repeated-measures ANOVA here. Is that really the best choice? What would happen if we tried the mixed-effects approach?
-3. **Take a second look at the model.** We should not only double-check our parameter choices, but rethink: is the repeated-measures model (multivariate normal) the most appropriate? Is it reasonable for the variance of differences at all time pairs to be identical? What about the covariance structure? There are others we could try, such as an autoregressive model (another arrow in the mixed-effects models' quiver).
+1.  **Modify the research details.** If we take a closer look at the table, there isn't an expected difference in the means until 48 hours, so why not measure differently, say, at 0, 48, 96, and 144 hours? Is there something else about the measurement process we could change to decrease the variance?
+2.  **Use a different test.** We are going with boilerplate repeated-measures ANOVA here. Is that really the best choice? What would happen if we tried the mixed-effects approach?
+3.  **Take a second look at the model.** We should not only double-check our parameter choices, but rethink: is the repeated-measures model (multivariate normal) the most appropriate? Is it reasonable for the variance of differences at all time pairs to be identical? What about the covariance structure? There are others we could try, such as an autoregressive model (another arrow in the mixed-effects models' quiver).
 
 ## Other things to keep in mind
 
-- This example is simple enough to have done analytically; we didn't have to simulate anything at all.
-- Even if the example hadn't been simple, we could still have searched for an *approximate* analytic solution which, if nothing else, might have given some insight into the power function's behavior.
-- We could have adjusted all the means upward by 7 and nothing would have changed. We based our initial values on literature review and clinical expertise.
-- We didn't bother with contrasts, functional means, or anything else. We just generated data consistent with our null and salient alternative and went on with our business.
-- We could have used whatever test we liked yet the method of attack would have been the same. Multiple comparisons, nested tests, nonparametric tests, whatever. As long as we include the full procedure in `runTest`, we will get valid estimates of power for *that* procedure at *that* alternative.
-- We need to be careful that the test we use (whatever it is) has its significance level controlled. This is easy to check in our example. We can set the means equal (`muTreat = muSham`) and run the simulation. We should get a power equal to 0.05 (within margin of error). Go ahead, check yourself. In fact, since we only care about the interaction, we could vertically offset the means by any fixed number, not necessarily zero.
-- Had we not been careful with our `stdevs`, our simulated NDIs would have gone negative, particularly at the latter time points. That would not have been reasonable since NDI is nonnegative.
-- **Simulation is not a silver bullet.**
-- Effective simulation requires substantial investment of thought into *both* the probability model and the parameter settings.
-- Our model had 13 parameters, and we had 4 more we didn't even touch\[fn:1\]. A person could be forgiven for wondering how in the world all of those parameters can be expressively spun into a T-shirt effect size. (They can't.)
-- The complexity can get out of control quickly. Simulation run times can take forever. The more complicated the model/test the worse it gets.
-- Informative simulation demands literature review and content expertise as a prerequisite. Some researchers are unable (due to lack of existing/quality studies) or unwilling (for all sorts of reasons, not all of which are good) to help the statistician fill in the details. For the statistician, this is a problem. If you don't know anything, then you can't say anything.
-- We can address uncertainty in our parameter guesses with prior distributions on the parameters. This adds a layer of complexity to the simulation since we must first simulate the parameters before simulating the data. Sometimes there's no other choice.
-- Theory tells us that the standard research designs (including our current one) can usually be re-parameterized by a single non-centrality parameter which ultimately determines the power at any particular alternative. Following our nose, it suggests that our problem is simpler than we're making it, that if we would just write down the non-centrality parameter (and the right numerator/denominator degrees of freedom), we'd be all set. Yep, we would. Good luck with all... that.
+-   This example is simple enough to have done analytically; we didn't have to simulate anything at all.
+-   Even if the example hadn't been simple, we could still have searched for an *approximate* analytic solution which, if nothing else, might have given some insight into the power function's behavior.
+-   We could have adjusted all the means upward by 7 and nothing would have changed. We based our initial values on literature review and clinical expertise.
+-   We didn't bother with contrasts, functional means, or anything else. We just generated data consistent with our null and salient alternative and went on with our business.
+-   We could have used whatever test we liked yet the method of attack would have been the same. Multiple comparisons, nested tests, nonparametric tests, whatever. As long as we include the full procedure in `runTest`, we will get valid estimates of power for *that* procedure at *that* alternative.
+-   We need to be careful that the test we use (whatever it is) has its significance level controlled. This is easy to check in our example. We can set the means equal (`muTreat = muSham`) and run the simulation. We should get a power equal to 0.05 (within margin of error). Go ahead, check yourself. In fact, since we only care about the interaction, we could vertically offset the means by any fixed number, not necessarily zero.
+-   Had we not been careful with our `stdevs`, our simulated NDIs would have gone negative, particularly at the latter time points. That would not have been reasonable since NDI is nonnegative.
+-   **Simulation is not a silver bullet.**
+-   Effective simulation requires substantial investment of thought into *both* the probability model and the parameter settings.
+-   Our model had 13 parameters, and we had 4 more we didn't even touch\[fn:1\]. A person could be forgiven for wondering how in the world all of those parameters can be expressively spun into a T-shirt effect size. (They can't.)
+-   The complexity can get out of control quickly. Simulation run times can take forever. The more complicated the model/test the worse it gets.
+-   Informative simulation demands literature review and content expertise as a prerequisite. Some researchers are unable (due to lack of existing/quality studies) or unwilling (for all sorts of reasons, not all of which are good) to help the statistician fill in the details. For the statistician, this is a problem. If you don't know anything, then you can't say anything.
+-   We can address uncertainty in our parameter guesses with prior distributions on the parameters. This adds a layer of complexity to the simulation since we must first simulate the parameters before simulating the data. Sometimes there's no other choice.
+-   Theory tells us that the standard research designs (including our current one) can usually be re-parameterized by a single non-centrality parameter which ultimately determines the power at any particular alternative. Following our nose, it suggests that our problem is simpler than we're making it, that if we would just write down the non-centrality parameter (and the right numerator/denominator degrees of freedom), we'd be all set. Yep, we would. Good luck with all... that.
 
 \[fn:1\] John von Neumann once said, "With four parameters I can fit an elephant, and with five I can make him wiggle his trunk."
 
 ## References
 
-- See [this question](http://stats.stackexchange.com/questions/21237/calculating-statistical-power) on [CrossValidated](http://stats.stackexchange.com/) which came up while I was working on this document (I might not have answered so quickly otherwise). Thanks to all who contributed to that discussion.
+-   See [this question](http://stats.stackexchange.com/questions/21237/calculating-statistical-power) on [CrossValidated](http://stats.stackexchange.com/) which came up while I was working on this document (I might not have answered so quickly otherwise). Thanks to all who contributed to that discussion.
 
-- *Conditions Under Which Mean Square Ratios in Repeated Measurements Designs Have Exact F-Distributions*. Huynh Huynh and Leonard S. Feldt, Journal of the American Statistical Association, Vol. 65, No. 332 (Dec., 1970), pp. 1582-1589, [stable link](http://www.jstor.org/stable/2284340).
+-   *Conditions Under Which Mean Square Ratios in Repeated Measurements Designs Have Exact F-Distributions*. Huynh Huynh and Leonard S. Feldt, Journal of the American Statistical Association, Vol. 65, No. 332 (Dec., 1970), pp. 1582-1589, [stable link](http://www.jstor.org/stable/2284340).
 
-- I found [this website](http://personality-project.org/r/r.anova.html) while preparing for the initial meeting and got some inspiration from the discussion near the middle.
+-   I found [this website](http://personality-project.org/r/r.anova.html) while preparing for the initial meeting and got some inspiration from the discussion near the middle.
 
-- There are several papers on [Russell Lenth's webpage](http://www.stat.uiowa.edu/\~rlenth/Power/) which are good reading.
+-   There are several papers on [Russell Lenth's webpage](http://www.stat.uiowa.edu/~rlenth/Power/) which are good reading.
 
-- I also like [this paper](http://onlinelibrary.wiley.com/doi/10.1348/000711001159357/abstract). Keselman, H. J., Algina, J. and Kowalchuk, R. K. (2001), *The analysis of repeated measures designs: A review.* British Journal of Mathematical and Statistical Psychology, 54: 1--20. doi: 10.1348/000711001159357
+-   I also like [this paper](http://onlinelibrary.wiley.com/doi/10.1348/000711001159357/abstract). Keselman, H. J., Algina, J. and Kowalchuk, R. K. (2001), *The analysis of repeated measures designs: A review.* British Journal of Mathematical and Statistical Psychology, 54: 1--20. doi: 10.1348/000711001159357
 
-- Many of the concepts above are explained more formally in my [Statistical Computing](https://github.com/gjkerns/STAT5840) course which you can get on GitHub.
+-   Many of the concepts above are explained more formally in my [Statistical Computing](https://github.com/gjkerns/STAT5840) course which you can get on GitHub.
 
-- To learn more about Monte Carlo methods with R I recommend [Introducing Monte Carlo Methods with R](http://www.springer.com/statistics/computanional+statistics/book/978-1-4419-1575-7) by Robert and Casella. I also like [Statistical Computing with R](http://personal.bgsu.edu/\~mrizzo/SCR.htm) by Rizzo which has a section about simulating power of statistical tests.
+-   To learn more about Monte Carlo methods with R I recommend [Introducing Monte Carlo Methods with R](http://www.springer.com/statistics/computanional+statistics/book/978-1-4419-1575-7) by Robert and Casella. I also like [Statistical Computing with R](http://personal.bgsu.edu/~mrizzo/SCR.htm) by Rizzo which has a section about simulating power of statistical tests.
 
-- For the record, here is my `sessionInfo`. 
+-   For the record, here is my `sessionInfo`.
 
 ```{r}
 sessionInfo()
