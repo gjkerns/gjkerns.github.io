@@ -281,9 +281,8 @@ loaded via a namespace (and not attached):
 </section>
 
  ]]></description>
-  <category>R</category>
-  <category>code</category>
-  <category>Classical</category>
+  <category>rstats</category>
+  <category>classical</category>
   <guid>https://gjkerns.github.io/posts/2012-01-20-power-sample-size/index.html</guid>
   <pubDate>Fri, 20 Jan 2012 05:00:00 GMT</pubDate>
   <media:content url="https://gjkerns.github.io/posts/2012-01-20-power-sample-size/interaction.png" medium="image" type="image/png" height="103" width="144"/>
@@ -412,9 +411,9 @@ loaded via a namespace (and not attached):
 </section>
 
  ]]></description>
-  <category>R</category>
-  <category>code</category>
-  <category>Bayesian</category>
+  <category>rstats</category>
+  <category>bayesian</category>
+  <category>mc</category>
   <guid>https://gjkerns.github.io/posts/2011-08-27-estimate-normal-mean/index.html</guid>
   <pubDate>Sat, 27 Aug 2011 04:00:00 GMT</pubDate>
   <media:content url="https://gjkerns.github.io/posts/2011-08-27-estimate-normal-mean/fig-yplot-1.png" medium="image" type="image/png" height="103" width="144"/>
@@ -472,7 +471,7 @@ loaded via a namespace (and not attached):
 
  ]]></description>
   <category>news</category>
-  <category>code</category>
+  <category>rstats</category>
   <guid>https://gjkerns.github.io/posts/2011-08-23-maiden/index.html</guid>
   <pubDate>Tue, 23 Aug 2011 04:00:00 GMT</pubDate>
   <media:content url="https://gjkerns.github.io/posts/2011-08-23-maiden/skiddaw.png" medium="image" type="image/png" height="144" width="144"/>
