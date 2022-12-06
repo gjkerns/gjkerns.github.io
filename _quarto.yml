@@ -5,6 +5,7 @@ project:
 website:
   title: "Statistics, plain and sample"
   site-url: "https://gjkerns.github.io"
+  favicon: favicon.ico
   twitter-card: 
     creator: "@gkerns"
   open-graph: true
