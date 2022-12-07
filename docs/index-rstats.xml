@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>Statistics, plain and sample</title>
-<link>https://gjkerns.github.io/index.html</link>
-<atom:link href="https://gjkerns.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://gjkerns.github.io/index.html#category=rstats</link>
+<atom:link href="https://gjkerns.github.io/index-rstats.xml" rel="self" type="application/rss+xml"/>
 <description>Statistics, plain and sample.</description>
 <generator>quarto-1.1.189</generator>
 <lastBuildDate>Fri, 20 Jan 2012 05:00:00 GMT</lastBuildDate>

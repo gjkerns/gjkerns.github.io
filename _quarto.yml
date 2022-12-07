@@ -5,6 +5,7 @@ project:
 website:
   title: "Statistics, plain and sample"
   site-url: "https://gjkerns.github.io"
+  description: "Statistics, plain and sample."
   favicon: favicon.ico
   twitter-card: 
     creator: "@gkerns"
@@ -13,6 +14,8 @@ website:
   navbar:
     right:
       - about.qmd
+      - icon: rss
+        href: index.xml
       - icon: github
         href: https://github.com/gjkerns
       - icon: mastodon

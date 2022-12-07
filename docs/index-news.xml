@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Statistics, plain and sample</title>
+<link>https://gjkerns.github.io/index.html#category=news</link>
+<atom:link href="https://gjkerns.github.io/index-news.xml" rel="self" type="application/rss+xml"/>
+<description>Statistics, plain and sample.</description>
+<generator>quarto-1.1.189</generator>
+<lastBuildDate>Tue, 23 Aug 2011 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Maiden Voyage</title>
+  <dc:creator>G. Jay Kerns</dc:creator>
+  <link>https://gjkerns.github.io/posts/2011-08-23-maiden/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="who" class="level2">
+<h2 class="anchored" data-anchor-id="who">Who</h2>
+<p><a href="https://gkerns.people.ysu.edu/">Me</a>. I’m an associate professor of Statistics at <a href="https://ysu.edu/">Youngstown State University</a> in <a href="http://en.wikipedia.org/wiki/Youngstown,_Ohio">Youngstown, Ohio, USA</a>. I’ve been using <a href="http://www.r-project.org/">R</a> for about 7 years, <a href="http://www.gnu.org/software/emacs/">Emacs</a> about 3 years, <a href="http://git-scm.com/">git</a> about 1 year, and <a href="http://orgmode.org/">Org-Mode</a> for less than a year.</p>
+</section>
+<section id="what" class="level2">
+<h2 class="anchored" data-anchor-id="what">What</h2>
+<p>I want this blog to be about statistics, plain and sample. No frills, no tomfoolery, just bare-boned statistics from beginning to end. Plus Emacs, ESS, Org-Mode, and R, but that goes without saying.</p>
+</section>
+<section id="when" class="level2">
+<h2 class="anchored" data-anchor-id="when">When</h2>
+<p>I’ve wanted to do this for a long time, but had as of yet convinced myself that I didn’t have time for it. A sabbatical coupled with the renewed energy of a <a href="http://www.warwick.ac.uk/statsdept/user-2011/">use R! conference</a> can change things considerably.</p>
+</section>
+<section id="how-emacs-org-mode-jekyll-github-blog-r" class="level2">
+<h2 class="anchored" data-anchor-id="how-emacs-org-mode-jekyll-github-blog-r">How: Emacs + Org mode + Jekyll + Github = Blog + R!</h2>
+<p>After much fiddling and googling I have managed to figure out how to run a blog entirely through Emacs and Git. If you’d like to do the same I recommend reading <a href="http://orgmode.org/worg/org-tutorials/org-jekyll.html">here</a> and <a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/">here</a>, with liberal doses of <a href="http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/">this</a> and <a href="https://github.com/mojombo/jekyll">that</a>. Ultimately, if you’d like to know how I do it then you can find the org-mode source code for this blog <a href="https://github.com/gjkerns/blog">here</a> and you can download the final result <a href="https://github.com/gjkerns/gjkerns.github.com">here</a> (which still is source code but is as close to final as possible).</p>
+<p>The bottom line: with this setup I can effortlessly do R code like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">rnorm</span>(<span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -1.26005550 -0.24153330 -0.26270810  0.11929914 -0.05094026 -0.54149791
+ [7]  0.51524809 -0.90041545  0.52012774 -0.23936052</code></pre>
+</div>
+</div>
+<p>And can include plots like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">x <span class="ot" style="color: #003B4F;">=</span> <span class="fu" style="color: #4758AB;">rnorm</span>(<span class="dv" style="color: #AD0000;">100</span>) </span>
+<span id="cb3-2">y <span class="ot" style="color: #003B4F;">=</span> <span class="fu" style="color: #4758AB;">rnorm</span>(<span class="dv" style="color: #AD0000;">100</span>)</span>
+<span id="cb3-3"><span class="fu" style="color: #4758AB;">plot</span>(y <span class="sc" style="color: #5E5E5E;">~</span> x)</span></code></pre></div>
+<div class="cell-output-display">
+<div id="fig-skiddaw" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://gjkerns.github.io/posts/2011-08-23-maiden/index_files/figure-html/fig-skiddaw-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: A plot to get things started.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>all housed inside a simple, dynamic text file that I can edit with <a href="http://www.gnu.org/software/emacs/">Emacs</a> and can version-control with <a href="http://git-scm.com/">git</a>. On top of all this, I get LaTeX formatting in HTML via <a href="http://www.mathjax.org/">MathJax</a>. Life is good.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{jaykerns2011,
+  author = {G. Jay Kerns},
+  editor = {},
+  title = {Maiden {Voyage}},
+  date = {2011-08-23},
+  url = {https://gjkerns.github.io/posts/2011-08-23-maiden},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-jaykerns2011" class="csl-entry quarto-appendix-citeas">
+G. Jay Kerns. 2011. <span>“Maiden Voyage.”</span> August 23, 2011. <a href="https://gjkerns.github.io/posts/2011-08-23-maiden">https://gjkerns.github.io/posts/2011-08-23-maiden</a>.
+</div></div></section></div> ]]></description>
+  <category>news</category>
+  <category>rstats</category>
+  <guid>https://gjkerns.github.io/posts/2011-08-23-maiden/index.html</guid>
+  <pubDate>Tue, 23 Aug 2011 04:00:00 GMT</pubDate>
+  <media:content url="https://gjkerns.github.io/posts/2011-08-23-maiden/skiddaw.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>

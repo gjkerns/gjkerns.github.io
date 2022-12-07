@@ -1,7 +1,6 @@
 ---
 title: "Power and Sample Size for Repeated Measures ANOVA with R"
 description: "A colleague is working on a paper and we recently got together to work through some of the statistical issues."
-author: "G. Jay Kerns"
 date: "2012-01-20"
 categories: [rstats, classical]
 image: "interaction.png"

@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This is a blog written by me. It isn’t meant as a political platform, personal diary, or much of anything aside from prattling on about topics that interest me in statistics, data science, and data analytics."
+    "text": "This is a blog written by me. It isn’t meant as a political platform, personal diary, or much of anything aside from my prattling on about topics that interest me in statistics, data science, and data analytics."
   },
   {
     "objectID": "posts/2011-08-23-maiden/index.html",
@@ -130,6 +130,6 @@
     "href": "posts/2011-08-23-maiden/index.html#how-emacs-org-mode-jekyll-github-blog-r",
     "title": "Maiden Voyage",
     "section": "How: Emacs + Org mode + Jekyll + Github = Blog + R!",
-    "text": "How: Emacs + Org mode + Jekyll + Github = Blog + R!\nAfter much fiddling and googling I have managed to figure out how to run a blog entirely through Emacs and Git. If you’d like to do the same I recommend reading here and here, with liberal doses of this and that. Ultimately, if you’d like to know how I do it then you can find the org-mode source code for this blog here and you can download the final result here (which still is source code but is as close to final as possible).\nThe bottom line: with this setup I can effortlessly do R code like this:\n\nrnorm(10)\n\n [1] -0.639241176 -0.125379364  0.380696317  0.520658783  0.748436786\n [6] -2.022139962  0.002782247  1.183300638 -0.366611392 -0.617332471\n\n\nAnd can include plots like this:\n\nx = rnorm(100) \ny = rnorm(100)\nplot(y ~ x)\n\n\n\n\nFigure 1: A plot to get things started.\n\n\n\n\nall housed inside a simple, dynamic text file that I can edit with Emacs and can version-control with git. On top of all this, I get LaTeX formatting in HTML via MathJax. Life is good."
+    "text": "How: Emacs + Org mode + Jekyll + Github = Blog + R!\nAfter much fiddling and googling I have managed to figure out how to run a blog entirely through Emacs and Git. If you’d like to do the same I recommend reading here and here, with liberal doses of this and that. Ultimately, if you’d like to know how I do it then you can find the org-mode source code for this blog here and you can download the final result here (which still is source code but is as close to final as possible).\nThe bottom line: with this setup I can effortlessly do R code like this:\n\nrnorm(10)\n\n [1] -1.26005550 -0.24153330 -0.26270810  0.11929914 -0.05094026 -0.54149791\n [7]  0.51524809 -0.90041545  0.52012774 -0.23936052\n\n\nAnd can include plots like this:\n\nx = rnorm(100) \ny = rnorm(100)\nplot(y ~ x)\n\n\n\n\nFigure 1: A plot to get things started.\n\n\n\n\nall housed inside a simple, dynamic text file that I can edit with Emacs and can version-control with git. On top of all this, I get LaTeX formatting in HTML via MathJax. Life is good."
   }
 ]

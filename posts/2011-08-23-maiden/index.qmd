@@ -1,7 +1,6 @@
 ---
 title: "Maiden Voyage"
 description: "This is the first post. A mission statement, of sorts."
-author: "G. Jay Kerns"
 date: "2011-08-23"
 categories: [news, rstats]
 image: "skiddaw.png"
@@ -9,17 +8,17 @@ image: "skiddaw.png"
 
 ## Who
 
-[Me](https://gkerns.people.ysu.edu/).  I'm an associate professor of Statistics at [Youngstown State University](https://ysu.edu/) in [Youngstown, Ohio, USA](http://en.wikipedia.org/wiki/Youngstown,_Ohio).  I've been using [R](http://www.r-project.org/) for about 7 years, [Emacs](http://www.gnu.org/software/emacs/) about 3 years, [git](http://git-scm.com/) about 1 year, and [Org-Mode](http://orgmode.org/) for less than a year.
+[Me](https://gkerns.people.ysu.edu/). I'm an associate professor of Statistics at [Youngstown State University](https://ysu.edu/) in [Youngstown, Ohio, USA](http://en.wikipedia.org/wiki/Youngstown,_Ohio). I've been using [R](http://www.r-project.org/) for about 7 years, [Emacs](http://www.gnu.org/software/emacs/) about 3 years, [git](http://git-scm.com/) about 1 year, and [Org-Mode](http://orgmode.org/) for less than a year.
 
-## What 
+## What
 
 I want this blog to be about statistics, plain and sample. No frills, no tomfoolery, just bare-boned statistics from beginning to end. Plus Emacs, ESS, Org-Mode, and R, but that goes without saying.
 
-## When 
+## When
 
 I've wanted to do this for a long time, but had as of yet convinced myself that I didn't have time for it. A sabbatical coupled with the renewed energy of a [use R! conference](http://www.warwick.ac.uk/statsdept/user-2011/) can change things considerably.
 
-## How: Emacs + Org mode + Jekyll + Github = Blog + R! 
+## How: Emacs + Org mode + Jekyll + Github = Blog + R!
 
 After much fiddling and googling I have managed to figure out how to run a blog entirely through Emacs and Git. If you'd like to do the same I recommend reading [here](http://orgmode.org/worg/org-tutorials/org-jekyll.html) and [here](http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/), with liberal doses of [this](http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/) and [that](https://github.com/mojombo/jekyll). Ultimately, if you'd like to know how I do it then you can find the org-mode source code for this blog [here](https://github.com/gjkerns/blog) and you can download the final result [here](https://github.com/gjkerns/gjkerns.github.com) (which still is source code but is as close to final as possible).
 
