@@ -16,6 +16,8 @@ website:
       - about.qmd
       - icon: rss
         href: index.xml
+      - icon: person
+        href: https://gkerns.people.ysu.edu
       - icon: github
         href: https://github.com/gjkerns
       - icon: mastodon

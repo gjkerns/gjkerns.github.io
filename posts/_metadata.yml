@@ -14,8 +14,8 @@ license: "CC BY-SA"
 author:
   - name: G. Jay Kerns
     url: https://gkerns.people.ysu.edu
-    affiliation: Youngstown State University
-    affiliation-url: https://ysu.edu
+#    affiliation: Youngstown State University
+#    affiliation-url: https://ysu.edu
     orcid: 0000-0001-9354-2842
 
 # Default fields for citation

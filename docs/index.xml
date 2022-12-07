@@ -319,7 +319,7 @@ ANOVA with R.”</span> January 20, 2012. <a href="https://gjkerns.github.io/pos
 <ol type="1">
 <li>Simulate a bunch of Cauchys, <img src="https://latex.codecogs.com/png.latex?%5Ctheta_%7B1%7D,%5Ctheta_%7B2%7D,%5Cldots,%5Ctheta_%7Bm%7D">, say.</li>
 <li>Estimate the integral in the denominator with <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bm%7D%5Csum_%7Bi=1%7D%5E%7Bm%7D%20%5Cpi%5Cexp%5Cleft%5B-%5Cfrac%7B1%7D%7B2%7D(x%20-%20%5Ctheta_%7Bi%7D)%5E2%20%5Cright%5D."></li>
-<li>Estimate the integral in the numerator with <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bm%7D%5Csum_%7Bi=1%7D%5E%7Bm%7D*%20%5Cpi%5Ctheta%7Bi%7D%20%5Cexp%20%5Cleft%5B-%5Cfrac%7B1%7D%7B2%7D(x%20-%20%5Ctheta_%7Bi%7D)%5E2%20%20%5Cright%5D."></li>
+<li>Estimate the integral in the numerator with <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bm%7D%5Csum_%7Bi=1%7D%5E%7Bm%7D%20%5Cpi%5C,%5Ctheta_%7Bi%7D%20%5Cexp%20%5Cleft%5B-%5Cfrac%7B1%7D%7B2%7D(x%20-%20%5Ctheta_%7Bi%7D)%5E2%20%20%5Cright%5D."></li>
 <li>Take the ratio, and we’re done.</li>
 </ol>
 <p>The <a href="http://en.wikipedia.org/wiki/Strong_Law_of_Small_Numbers">Strong Law of Large Numbers</a> says that the averages in 2 and 3 both converge to where they should, so the ratio should converge to the right place as well.</p>

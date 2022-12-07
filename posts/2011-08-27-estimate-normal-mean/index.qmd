@@ -32,7 +32,7 @@ Given observed data $X=x$,
 
 1.  Simulate a bunch of Cauchys, $\theta_{1},\theta_{2},\ldots,\theta_{m}$, say.
 2.  Estimate the integral in the denominator with $$\frac{1}{m}\sum_{i=1}^{m} \pi\exp\left[-\frac{1}{2}(x - \theta_{i})^2 \right].$$
-3.  Estimate the integral in the numerator with $$\frac{1}{m}\sum_{i=1}^{m}* \pi\theta{i} \exp \left[-\frac{1}{2}(x - \theta_{i})^2  \right].$$
+3.  Estimate the integral in the numerator with $$\frac{1}{m}\sum_{i=1}^{m} \pi\,\theta_{i} \exp \left[-\frac{1}{2}(x - \theta_{i})^2  \right].$$
 4.  Take the ratio, and we're done.
 
 The [Strong Law of Large Numbers](http://en.wikipedia.org/wiki/Strong_Law_of_Small_Numbers) says that the averages in 2 and 3 both converge to where they should, so the ratio should converge to the right place as well.
