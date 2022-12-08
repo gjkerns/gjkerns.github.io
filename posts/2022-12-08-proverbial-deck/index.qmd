@@ -9,19 +9,23 @@ draft: false
 
 ## Pick a card, any card
 
-When I studied Bayesian statistics, the first case we worked on was the one parameter problem: estimating a population proportion, $p$. I bet this is how lots of Bayesian classes go and for good reason. When we did it, the interpretation was that $p$ represented the probability of Heads when flipping a coin, which is natural and easy to understand. But there are many plausible alternatives.  In [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/) [@mcelreath2020], the parameter $p$ represents the probability that a randomly tossed globe of the Earth lands on water.
+When I studied Bayesian statistics, the first case we worked on was the one parameter problem: estimating a population proportion, $p$. I bet this is how lots of Bayesian classes go and for good reason. When we did it, the interpretation was that $p$ represented the probability of Heads when flipping a coin, which is natural and easy to understand. But there are many plausible alternatives. In [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/) [@mcelreath2020], the parameter $p$ represents the probability that a randomly tossed globe of the Earth lands on water.
 
 For reasons that will hopefully become clear, before too much longer, I would like to investigate a one parameter problem associated with a deck of cards. I intend to refer to this quite a bit, so I want to define my terms, of course, and might as well do that here, might as well do that now.
 
 ## Deck of cards
 
-Yeah, we're going to talk about cards. The cards I am talking about is a "standard" deck of 52 cards, which turns out is *French-suited* and most commonly printed in the *English pattern*.^[The [Wikipedia page for playing cards](https://en.wikipedia.org/wiki/Playing_card) has more than you never wanted to know about cards!] We have four (4) "suits", namely, Clubs ($\clubsuit$), Diamonds ($\diamondsuit$), Hearts ($\heartsuit$), and Spades ($\spadesuit$).^[The hearts and diamonds are usually depicted as being filled, but I'm trying to be sparing with the extravagant LaTeX packages in the spirit of that "no frills, no shenanigans" business.]
+Yeah, we're going to talk about cards. The cards I am talking about is a "standard" deck of 52 cards, which turns out is *French-suited* and most commonly printed in the *English pattern*.[^1] We have four (4) "suits", namely, Clubs ($\clubsuit$), Diamonds ($\diamondsuit$), Hearts ($\heartsuit$), and Spades ($\spadesuit$).[^2]
+
+[^1]: The [Wikipedia page for playing cards](https://en.wikipedia.org/wiki/Playing_card) has more than you never wanted to know about cards!
+
+[^2]: The hearts and diamonds are usually depicted as being filled, but I'm trying to be sparing with the extravagant LaTeX packages in the spirit of that "no frills, no shenanigans" business.
 
 ![53 Cards @munroe2217](53_cards.png "53 Cards"){.preview-image}
 
 Anyway, we have the suits and the other component is sometimes called the "ranks", namely, ranks 2 through 10, then Jack (J), Queen (Q), King (K), and Ace (A). The rank of Ace can be higher than the rank of King or lower than the rank of 2, depending on the poker game you are playing, and the caliber of the pistol in the breast-pocket of the player sitting in the seat opposite yours.
 
-::: {.callout-note}
+::: callout-note
 We are usually *not* going to be interested in the two Joker cards present in most decks purchased at Walmart, nor that extra card that has the rules printed on it. Actually, we may have occasion to use them at some point, in which case I will point back to right here.
 :::
 
@@ -42,6 +46,6 @@ head(cards(makespace = TRUE))
 
 You will notice an extra column added to the data frame called `probs`, and that output of `0.01923077` equals $1/52$, because of course it does.
 
-The second reason is that, particularly for the Bayesian discussion I have in mind, it will be convenient to think about sets of 52 cards that are *nonstandard*, that is, decks that don't necessarily have 13 Clubs, 13 Diamonds, and so on. What if the Aces are missing? And I'm not talking about "...oops, I left the Aces at home and we  really only have 48 cards"---No!  I'm talking about a deck of 52 cards which might be *stacked* in unexpected ways that we'd like to consider for our own devilish purposes.
+The second reason is that, particularly for the Bayesian discussion I have in mind, it will be convenient to think about sets of 52 cards that are *nonstandard*, that is, decks that don't necessarily have 13 Clubs, 13 Diamonds, and so on. What if the Aces are missing? And I'm not talking about "...oops, I left the Aces at home and we really only have 48 cards"---No! I'm talking about a deck of 52 cards which might be *stacked* in unexpected ways that we'd like to consider for our own devilish purposes.
 
 Of course, if we go to Walmart and buy a deck of cards then with almost perfect certainty there will be exactly 52 cards (plus 3) and all will have the correct suits and ranks printed on them and any reasonably not-crazy normal person would expect exactly that set of cards when presented with what looks like a standard deck, which is precisely the reason why I would like to toy with those assumptions in pursuit of interesting Bayesian problems.
