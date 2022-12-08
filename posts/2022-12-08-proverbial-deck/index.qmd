@@ -17,7 +17,7 @@ For reasons that will hopefully become clear, before too much longer, I would li
 
 Yeah, we're going to talk about cards. The cards I am talking about is a "standard" deck of 52 cards, which turns out is *French-suited* and most commonly printed in the *English pattern*.^[The [Wikipedia page for playing cards](https://en.wikipedia.org/wiki/Playing_card) has more than you never wanted to know about cards!] We have four (4) "suits", namely, Clubs ($\clubsuit$), Diamonds ($\diamondsuit$), Hearts ($\heartsuit$), and Spades ($\spadesuit$).^[The hearts and diamonds are usually depicted as being filled, but I'm trying to be sparing with the extravagant LaTeX packages in the spirit of that "no frills, no shenanigans" business.]
 
-![53 Cards @munroe2217](53_cards.png "53 Cards"){fig-alt="53 Cards"} 
+![53 Cards @munroe2217](53_cards.png "53 Cards"){.preview-image}
 
 Anyway, we have the suits and the other component is sometimes called the "ranks", namely, ranks 2 through 10, then Jack (J), Queen (Q), King (K), and Ace (A). The rank of Ace can be higher than the rank of King or lower than the rank of 2, depending on the poker game you are playing, and the caliber of the pistol in the breast-pocket of the player sitting in the seat opposite yours.
 
