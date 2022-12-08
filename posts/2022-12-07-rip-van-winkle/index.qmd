@@ -3,7 +3,9 @@ title: "Rip Van Winkle"
 description: "Wow. A lot has happened in the past 10 years."
 date: "2022-12-07"
 categories: [news]
-image: rip.jpg
+image: preview.jpg
+twitter-card: 
+  image: preview.jpg
 draft: false
 ---
 
