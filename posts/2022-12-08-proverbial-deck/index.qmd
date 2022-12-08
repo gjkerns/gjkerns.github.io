@@ -4,7 +4,7 @@ description: "The cards we play with have been around for hundreds of years."
 date: "2022-12-08"
 categories: [bayesian, rstats]
 image: "53_cards.png"
-draft: true
+draft: false
 ---
 
 ## Pick a card, any card
