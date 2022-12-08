@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gjkerns.github.io/index.html</loc>
-    <lastmod>2022-12-07T14:12:17.327Z</lastmod>
+    <lastmod>2022-12-08T03:50:42.602Z</lastmod>
   </url>
   <url>
     <loc>https://gjkerns.github.io/about.html</loc>
@@ -19,5 +19,13 @@
   <url>
     <loc>https://gjkerns.github.io/posts/2012-01-20-power-sample-size/index.html</loc>
     <lastmod>2022-12-07T14:05:46.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjkerns.github.io/posts/2022-12-07/index.html</loc>
+    <lastmod>2022-12-08T01:18:17.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle/index.html</loc>
+    <lastmod>2022-12-08T03:50:41.808Z</lastmod>
   </url>
 </urlset>

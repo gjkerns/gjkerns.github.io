@@ -10,7 +10,55 @@
 <atom:link href="https://gjkerns.github.io/index-news.xml" rel="self" type="application/rss+xml"/>
 <description>Statistics, plain and sample.</description>
 <generator>quarto-1.1.189</generator>
-<lastBuildDate>Tue, 23 Aug 2011 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 07 Dec 2022 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Rip Van Winkle</title>
+  <dc:creator>G. Jay Kerns</dc:creator>
+  <link>https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="the-pandemics-over-isnt-it" class="level2">
+<h2 class="anchored" data-anchor-id="the-pandemics-over-isnt-it">The pandemic’s over, isn’t it?</h2>
+<p><img src="https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle/rip.jpg" title="Depiction of Rip Van Winkle by John Quidor (1829)" class="img-fluid" alt="Depiction of Rip Van Winkle by John Quidor (1829)"> <span class="citation" data-cites="quidor1829">Quidor (1829)</span></p>
+<p>I originally wanted to title this post “The Old Woman Voyage,” as sort of counterpoint to the original “Maiden Voyage” in 2011, but somehow Rip Van Winkle seems more appropriate. Do you ever feel like you woke up one day to realize the world is completely different from what you thought it was? And the world is <strong>so</strong> different that it feels like you must have been sleeping so long that the world has passed you by? Yeah? No? Doesn’t matter—that’s how I feel right now.</p>
+</section>
+<section id="new-world" class="level2">
+<h2 class="anchored" data-anchor-id="new-world">New world</h2>
+<p>Maybe it was the pandemic, maybe it was my kids getting older, maybe it was the post-apocalyptic landscape of that which we call academia, maybe it was all the turmoil going on all around us in the world, somehow, there is a spooky energy in the air. I blinked my eyes and now it is so much easier to <strong>do</strong> stuff, like write blogs, code on Github, generate <code>NAMESPACE</code>s and documentation for <code>R</code> packages.</p>
+<p>And all of that social media I have shunned for literally a decade is bustling with activity populated by people with dynamite ideas about anything and everything, not all of which are cat pictures and what JLo happens to be eating for breakfast.</p>
+</section>
+<section id="new-mission" class="level2">
+<h2 class="anchored" data-anchor-id="new-mission">New mission</h2>
+<p>This blog is supposed to be about statistics, plain and sample. No JLo. No cat pictures. No snarky comments about something a politician said 10 minutes ago, or lamentations about all the turmoil going on in the world. There are too many other people talking about those things everywhere else.</p>
+<p>Maybe this isn’t a new mission, but it is a renewed energy to do what I like and do best: statistics, plain and sample.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-quidor1829" class="csl-entry">
+Quidor, John. 1829. <span>“Depiction of Rip Van Winkle.”</span> 1829. <a href="https://www.artic.edu/artworks/97873/rip-van-winkle">https://www.artic.edu/artworks/97873/rip-van-winkle</a>.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{jaykerns2022,
+  author = {G. Jay Kerns},
+  editor = {},
+  title = {Rip {Van} {Winkle}},
+  date = {2022-12-07},
+  url = {https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-jaykerns2022" class="csl-entry quarto-appendix-citeas">
+G. Jay Kerns. 2022. <span>“Rip Van Winkle.”</span> December 7, 2022. <a href="https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle">https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle</a>.
+</div></div></section></div> ]]></description>
+  <category>news</category>
+  <guid>https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle/index.html</guid>
+  <pubDate>Wed, 07 Dec 2022 05:00:00 GMT</pubDate>
+  <media:content url="https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle/rip.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Maiden Voyage</title>
   <dc:creator>G. Jay Kerns</dc:creator>

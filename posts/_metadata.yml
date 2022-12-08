@@ -20,3 +20,7 @@ author:
 
 # Default fields for citation
 citation: true
+
+# Bibliography
+
+bibliography: ../library.bib

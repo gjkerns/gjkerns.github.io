@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="G. Jay Kerns">
+<meta name="dcterms.date" content="2022-12-07">
+<meta name="description" content="Wow. A lot has happened in the past 10 years.">
 
-<title>Statistics, plain and sample</title>
+<title>Statistics, plain and sample - Rip Van Winkle</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,30 +23,47 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,57 +83,28 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<link rel="alternate" type="application/rss+xml" title="Statistics, plain and sample" href="index.xml"><meta property="og:title" content="Statistics, plain and sample">
-<meta property="og:description" content="No frills. No shenanigans. Just statistics.">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Statistics, plain and sample - Rip Van Winkle">
+<meta property="og:description" content="Wow. A lot has happened in the past 10 years.">
+<meta property="og:image" content="https://gjkerns.github.io/posts\2022-12-07\rip.jpg">
 <meta property="og:site-name" content="Statistics, plain and sample">
-<meta name="twitter:title" content="Statistics, plain and sample">
-<meta name="twitter:description" content="No frills. No shenanigans. Just statistics.">
+<meta name="twitter:title" content="Statistics, plain and sample - Rip Van Winkle">
+<meta name="twitter:description" content="Wow. A lot has happened in the past 10 years.">
+<meta name="twitter:image" content="https://gjkerns.github.io/posts\2022-12-07\rip.jpg">
 <meta name="twitter:creator" content="@gkerns">
-<meta name="twitter:card" content="summary">
-</head><body class="nav-fixed"><a rel="me" href="https://mathstodon.xyz/@gjkerns"></a>
+<meta name="twitter:card" content="summary_large_image">
+</head>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-
-
-
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Statistics, plain and sample</span>
     </a>
   </div>
@@ -123,10 +114,10 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="../../about.html">About</a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
 </i> 
  </a>
   </li>  
@@ -162,195 +153,83 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Statistics, plain and sample</h1>
-            <p class="subtitle lead">No frills. No shenanigans. Just statistics.</p>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Rip Van Winkle</h1>
+                  <div>
+        <div class="description">
+          Wow. A lot has happened in the past 10 years.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>G. Jay Kerns <a href="https://orcid.org/0000-0001-9354-2842" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 7, 2022</p>
+      </div>
+    </div>
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bayesian">bayesian <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classical">classical <span class="quarto-category-count">(1)</span></div><div class="category" data-category="mc">mc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rstats">rstats <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<section id="the-pandemics-over-isnt-it" class="level2">
+<h2 class="anchored" data-anchor-id="the-pandemics-over-isnt-it">The pandemic’s over, isn’t it?</h2>
+<p><img src="rip.jpg" title="Depiction of Rip Van Winkle by John Quidor (1829)" class="img-fluid" alt="Depiction of Rip Van Winkle by John Quidor (1829)"> <span class="citation" data-cites="quidor1829">Quidor (<a href="#ref-quidor1829" role="doc-biblioref">1829</a>)</span></p>
+<p>I originally wanted to title this post “The Old Woman Voyage,” as sort of counterpoint to the original “Maiden Voyage” in 2011, but somehow Rip Van Winkle seems more appropriate. Do you ever feel like you woke up one day to realize the world is completely different from what you thought it was? And the world is <strong>so</strong> different that it feels like you must have been sleeping so long that the world has passed you by? Yeah? No? Doesn’t matter—that’s how I feel right now.</p>
+</section>
+<section id="new-world" class="level2">
+<h2 class="anchored" data-anchor-id="new-world">New world</h2>
+<p>Maybe it was the pandemic, maybe it was my kids getting older, maybe it was the obliterated landscape of that which we call academia, maybe it was all the turmoil going on all around us, somehow, there is a spooky energy in the air. I blinked my eyes and now it is so much easier to <strong>do</strong> stuff, like write blogs, code on Github, generate <code>NAMESPACE</code>s and documentation for <code>R</code> packages.</p>
+<p>And all of that social media I have shunned for literally a decade is bustling with activity populated by people with dynamite ideas about anything and everything, not all of which are cat pictures and what JLo happens to be eating for breakfast.</p>
+</section>
+<section id="new-mission" class="level2">
+<h2 class="anchored" data-anchor-id="new-mission">New mission</h2>
+<p>This blog is supposed to be about statistics, plain and sample. No JLo. No cat pictures. No snarky comments about something a politician said 10 minutes ago, or lamentations about all the turmoil going on in the world. There are too many other people talking about those things everywhere else.</p>
+<p>Maybe this isn’t a new mission, but it is a renewed energy to do what I like and do best: statistics, plain and sample.</p>
 
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1670389200000" data-listing-file-modified-sort="1670471439563" data-listing-reading-time-sort="1.485">
-<div class="thumbnail">
-<p><a href="./posts/2022-12-07-rip-van-winkle/index.html"> <img src="./posts/2022-12-07-rip-van-winkle/rip.jpg" class="thumnail-image"> </a></p>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-quidor1829" class="csl-entry" role="doc-biblioentry">
+Quidor, John. 1829. <span>“Depiction of Rip Van Winkle.”</span> 1829. <a href="https://www.artic.edu/artworks/97873/rip-van-winkle">https://www.artic.edu/artworks/97873/rip-van-winkle</a>.
 </div>
-<div class="body">
-<a href="./posts/2022-12-07-rip-van-winkle/index.html">
-<h3 class="no-anchor listing-title">
-Rip Van Winkle
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./posts/2022-12-07-rip-van-winkle/index.html">
-<div class="listing-description">
-<p>Wow. A lot has happened in the past 10 years.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2022-12-07-rip-van-winkle/index.html">
-<div class="listing-date">
-Dec 7, 2022
-</div>
-<div class="listing-author">
-G. Jay Kerns
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="rstats,classical" data-listing-date-sort="1327035600000" data-listing-file-modified-sort="1670379589583" data-listing-reading-time-sort="14">
-<div class="thumbnail">
-<p><a href="./posts/2012-01-20-power-sample-size/index.html"> <img src="./posts/2012-01-20-power-sample-size/interaction.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2012-01-20-power-sample-size/index.html">
-<h3 class="no-anchor listing-title">
-Power and Sample Size for Repeated Measures ANOVA with R
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('rstats'); return false;">
-rstats
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('classical'); return false;">
-classical
-</div>
-</div>
-<a href="./posts/2012-01-20-power-sample-size/index.html">
-<div class="listing-description">
-<p>A colleague is working on a paper and we recently got together to work through some of the statistical issues.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2012-01-20-power-sample-size/index.html">
-<div class="listing-date">
-Jan 20, 2012
-</div>
-<div class="listing-author">
-G. Jay Kerns
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="rstats,bayesian,mc" data-listing-date-sort="1314417600000" data-listing-file-modified-sort="1670422329624" data-listing-reading-time-sort="5.595">
-<div class="thumbnail">
-<p><a href="./posts/2011-08-27-estimate-normal-mean/index.html"> <img src="./posts/2011-08-27-estimate-normal-mean/fig-yplot-1.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2011-08-27-estimate-normal-mean/index.html">
-<h3 class="no-anchor listing-title">
-Estimating a normal mean with a cauchy prior
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('rstats'); return false;">
-rstats
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bayesian'); return false;">
-bayesian
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('mc'); return false;">
-mc
-</div>
-</div>
-<a href="./posts/2011-08-27-estimate-normal-mean/index.html">
-<div class="listing-description">
-<p>This is an example (with a Bayesian spin) illustrating one way to compute a complicated expectation (that is, an integral) by the Monte Carlo method.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2011-08-27-estimate-normal-mean/index.html">
-<div class="listing-date">
-Aug 27, 2011
-</div>
-<div class="listing-author">
-G. Jay Kerns
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="news,rstats" data-listing-date-sort="1314072000000" data-listing-file-modified-sort="1670379641741" data-listing-reading-time-sort="1.38">
-<div class="thumbnail">
-<p><a href="./posts/2011-08-23-maiden/index.html"> <img src="./posts/2011-08-23-maiden/skiddaw.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2011-08-23-maiden/index.html">
-<h3 class="no-anchor listing-title">
-Maiden Voyage
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('rstats'); return false;">
-rstats
-</div>
-</div>
-<a href="./posts/2011-08-23-maiden/index.html">
-<div class="listing-description">
-<p>This is the first post. A mission statement, of sorts.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2011-08-23-maiden/index.html">
-<div class="listing-date">
-Aug 23, 2011
-</div>
-<div class="listing-author">
-G. Jay Kerns
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{jaykerns2022,
+  author = {G. Jay Kerns},
+  editor = {},
+  title = {Rip {Van} {Winkle}},
+  date = {2022-12-07},
+  url = {https://gjkerns.github.io/posts/2022-12-07},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-jaykerns2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+G. Jay Kerns. 2022. <span>“Rip Van Winkle.”</span> December 7, 2022. <a href="https://gjkerns.github.io/posts/2022-12-07">https://gjkerns.github.io/posts/2022-12-07</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

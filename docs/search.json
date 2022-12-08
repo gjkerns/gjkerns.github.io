@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Statistics, plain and sample",
     "section": "",
-    "text": "rstats\n\n\nclassical\n\n\n\n\nA colleague is working on a paper and we recently got together to work through some of the statistical issues.\n\n\n\n\n\n\nJan 20, 2012\n\n\nG. Jay Kerns\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nrstats\n\n\nbayesian\n\n\nmc\n\n\n\n\nThis is an example (with a Bayesian spin) illustrating one way to compute a complicated expectation (that is, an integral) by the Monte Carlo method.\n\n\n\n\n\n\nAug 27, 2011\n\n\nG. Jay Kerns\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nrstats\n\n\n\n\nThis is the first post. A mission statement, of sorts.\n\n\n\n\n\n\nAug 23, 2011\n\n\nG. Jay Kerns\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\n\n\nWow. A lot has happened in the past 10 years.\n\n\n\n\n\n\nDec 7, 2022\n\n\nG. Jay Kerns\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nrstats\n\n\nclassical\n\n\n\n\nA colleague is working on a paper and we recently got together to work through some of the statistical issues.\n\n\n\n\n\n\nJan 20, 2012\n\n\nG. Jay Kerns\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nrstats\n\n\nbayesian\n\n\nmc\n\n\n\n\nThis is an example (with a Bayesian spin) illustrating one way to compute a complicated expectation (that is, an integral) by the Monte Carlo method.\n\n\n\n\n\n\nAug 27, 2011\n\n\nG. Jay Kerns\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\nrstats\n\n\n\n\nThis is the first post. A mission statement, of sorts.\n\n\n\n\n\n\nAug 23, 2011\n\n\nG. Jay Kerns\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -131,5 +131,47 @@
     "title": "Maiden Voyage",
     "section": "How: Emacs + Org mode + Jekyll + Github = Blog + R!",
     "text": "How: Emacs + Org mode + Jekyll + Github = Blog + R!\nAfter much fiddling and googling I have managed to figure out how to run a blog entirely through Emacs and Git. If you’d like to do the same I recommend reading here and here, with liberal doses of this and that. Ultimately, if you’d like to know how I do it then you can find the org-mode source code for this blog here and you can download the final result here (which still is source code but is as close to final as possible).\nThe bottom line: with this setup I can effortlessly do R code like this:\n\nrnorm(10)\n\n [1] -1.26005550 -0.24153330 -0.26270810  0.11929914 -0.05094026 -0.54149791\n [7]  0.51524809 -0.90041545  0.52012774 -0.23936052\n\n\nAnd can include plots like this:\n\nx = rnorm(100) \ny = rnorm(100)\nplot(y ~ x)\n\n\n\n\nFigure 1: A plot to get things started.\n\n\n\n\nall housed inside a simple, dynamic text file that I can edit with Emacs and can version-control with git. On top of all this, I get LaTeX formatting in HTML via MathJax. Life is good."
+  },
+  {
+    "objectID": "posts/2022-12-07/index.html",
+    "href": "posts/2022-12-07/index.html",
+    "title": "Rip Van Winkle",
+    "section": "",
+    "text": "Quidor (1829)\nI originally wanted to title this post “The Old Woman Voyage,” as sort of counterpoint to the original “Maiden Voyage” in 2011, but somehow Rip Van Winkle seems more appropriate. Do you ever feel like you woke up one day to realize the world is completely different from what you thought it was? And the world is so different that it feels like you must have been sleeping so long that the world has passed you by? Yeah? No? Doesn’t matter—that’s how I feel right now."
+  },
+  {
+    "objectID": "posts/2022-12-07/index.html#new-world",
+    "href": "posts/2022-12-07/index.html#new-world",
+    "title": "Rip Van Winkle",
+    "section": "New world",
+    "text": "New world\nMaybe it was the pandemic, maybe it was my kids getting older, maybe it was the obliterated landscape of that which we call academia, maybe it was all the turmoil going on all around us, somehow, there is a spooky energy in the air. I blinked my eyes and now it is so much easier to do stuff, like write blogs, code on Github, generate NAMESPACEs and documentation for R packages.\nAnd all of that social media I have shunned for literally a decade is bustling with activity populated by people with dynamite ideas about anything and everything, not all of which are cat pictures and what JLo happens to be eating for breakfast."
+  },
+  {
+    "objectID": "posts/2022-12-07/index.html#new-mission",
+    "href": "posts/2022-12-07/index.html#new-mission",
+    "title": "Rip Van Winkle",
+    "section": "New mission",
+    "text": "New mission\nThis blog is supposed to be about statistics, plain and sample. No JLo. No cat pictures. No snarky comments about something a politician said 10 minutes ago, or lamentations about all the turmoil going on in the world. There are too many other people talking about those things everywhere else.\nMaybe this isn’t a new mission, but it is a renewed energy to do what I like and do best: statistics, plain and sample."
+  },
+  {
+    "objectID": "posts/2022-12-07-rip-van-winkle/index.html",
+    "href": "posts/2022-12-07-rip-van-winkle/index.html",
+    "title": "Rip Van Winkle",
+    "section": "",
+    "text": "Quidor (1829)\nI originally wanted to title this post “The Old Woman Voyage,” as sort of counterpoint to the original “Maiden Voyage” in 2011, but somehow Rip Van Winkle seems more appropriate. Do you ever feel like you woke up one day to realize the world is completely different from what you thought it was? And the world is so different that it feels like you must have been sleeping so long that the world has passed you by? Yeah? No? Doesn’t matter—that’s how I feel right now."
+  },
+  {
+    "objectID": "posts/2022-12-07-rip-van-winkle/index.html#new-world",
+    "href": "posts/2022-12-07-rip-van-winkle/index.html#new-world",
+    "title": "Rip Van Winkle",
+    "section": "New world",
+    "text": "New world\nMaybe it was the pandemic, maybe it was my kids getting older, maybe it was the post-apocalyptic landscape of that which we call academia, maybe it was all the turmoil going on all around us in the world, somehow, there is a spooky energy in the air. I blinked my eyes and now it is so much easier to do stuff, like write blogs, code on Github, generate NAMESPACEs and documentation for R packages.\nAnd all of that social media I have shunned for literally a decade is bustling with activity populated by people with dynamite ideas about anything and everything, not all of which are cat pictures and what JLo happens to be eating for breakfast."
+  },
+  {
+    "objectID": "posts/2022-12-07-rip-van-winkle/index.html#new-mission",
+    "href": "posts/2022-12-07-rip-van-winkle/index.html#new-mission",
+    "title": "Rip Van Winkle",
+    "section": "New mission",
+    "text": "New mission\nThis blog is supposed to be about statistics, plain and sample. No JLo. No cat pictures. No snarky comments about something a politician said 10 minutes ago, or lamentations about all the turmoil going on in the world. There are too many other people talking about those things everywhere else.\nMaybe this isn’t a new mission, but it is a renewed energy to do what I like and do best: statistics, plain and sample."
   }
 ]

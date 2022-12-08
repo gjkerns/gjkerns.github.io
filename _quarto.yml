@@ -21,7 +21,7 @@ website:
       - icon: github
         href: https://github.com/gjkerns
       - icon: mastodon
-        href: "https://mathstodon.xyz/@gjkerns"
+        href: 'https://mathstodon.xyz/@gjkerns'
       - icon: linkedin
         href: https://www.linkedin.com/in/g-jay-kerns-9ab99111/
 format:
