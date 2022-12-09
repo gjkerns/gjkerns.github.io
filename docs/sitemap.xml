@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gjkerns.github.io/index.html</loc>
-    <lastmod>2022-12-08T07:20:18.701Z</lastmod>
+    <lastmod>2022-12-09T03:55:29.395Z</lastmod>
   </url>
   <url>
     <loc>https://gjkerns.github.io/about.html</loc>
@@ -27,5 +27,9 @@
   <url>
     <loc>https://gjkerns.github.io/posts/2022-12-07-rip-van-winkle/index.html</loc>
     <lastmod>2022-12-08T04:42:29.195Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjkerns.github.io/posts/2022-12-08-proverbial-deck/index.html</loc>
+    <lastmod>2022-12-08T21:52:27.114Z</lastmod>
   </url>
 </urlset>
