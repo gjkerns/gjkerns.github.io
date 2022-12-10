@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="G. Jay Kerns">
-<meta name="dcterms.date" content="2011-08-23">
-<meta name="description" content="This is the first post. A mission statement, of sorts.">
+<meta name="dcterms.date" content="2022-12-09">
+<meta name="description" content="We are limited only by our imagination.">
 
-<title>Statistics, plain and sample - Maiden Voyage</title>
+<title>Statistics, plain and sample - The prior possibilities are endless</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,19 +128,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Statistics, plain and sample - Maiden Voyage">
-<meta property="og:description" content="This is the first post. A mission statement, of sorts.">
-<meta property="og:image" content="https://gjkerns.github.io/posts\2011-08-23-maiden\skiddaw.png">
+<meta property="og:title" content="Statistics, plain and sample - The prior possibilities are endless">
+<meta property="og:description" content="We are limited only by our imagination.">
+<meta property="og:image" content="https://gjkerns.github.io/posts\2022-12-09-prior-possibilities-endless\53_cards.png">
 <meta property="og:site-name" content="Statistics, plain and sample">
-<meta property="og:image:height" content="480">
-<meta property="og:image:width" content="480">
-<meta name="twitter:title" content="Statistics, plain and sample - Maiden Voyage">
-<meta name="twitter:description" content="This is the first post. A mission statement, of sorts.">
-<meta name="twitter:image" content="https://gjkerns.github.io/posts\2011-08-23-maiden\skiddaw.png">
-<meta name="twitter:image-height" content="480">
-<meta name="twitter:image-width" content="480">
+<meta name="twitter:title" content="Statistics, plain and sample - The prior possibilities are endless">
+<meta name="twitter:description" content="We are limited only by our imagination.">
+<meta name="twitter:image" content="https://gjkerns.github.io/posts\2022-12-09-prior-possibilities-endless\53_cards.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -201,14 +198,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Maiden Voyage</h1>
+      <h1 class="title">The prior possibilities are endless</h1>
                   <div>
         <div class="description">
-          This is the first post. A mission statement, of sorts.
+          We are limited only by our imagination.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">bayesian</div>
                 <div class="quarto-category">rstats</div>
               </div>
                   </div>
@@ -227,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 23, 2011</p>
+        <p class="date">December 9, 2022</p>
       </div>
     </div>
       
@@ -244,58 +241,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="who" class="level2">
-<h2 class="anchored" data-anchor-id="who">Who</h2>
-<p><a href="https://gkerns.people.ysu.edu/">Me</a>. I’m an associate professor of Statistics at <a href="https://ysu.edu/">Youngstown State University</a> in <a href="http://en.wikipedia.org/wiki/Youngstown,_Ohio">Youngstown, Ohio, USA</a>. I’ve been using <a href="http://www.r-project.org/">R</a> for about 7 years, <a href="http://www.gnu.org/software/emacs/">Emacs</a> about 3 years, <a href="http://git-scm.com/">git</a> about 1 year, and <a href="http://orgmode.org/">Org-Mode</a> for less than a year.</p>
+<section id="pick-a-card-any-card" class="level2">
+<h2 class="anchored" data-anchor-id="pick-a-card-any-card">Pick a card, any card</h2>
+<p><a href="../../posts/2022-12-08-proverbial-deck/index.html">In our last post</a> we discussed the proverbial deck of cards and we did so to set up our “universe” we can use to think about priors we are going to take to be reasonable in a given problem. But we will need <em>something</em> to put a prior on, first. So here we go. Suppose our random experiment is to “pick a card, any card”.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> We select one card at the deck at random, and suppose we thoroughly shuffled that deck ahead of time. We would like to learn about</p>
+<p><span class="math display">\[
+p = \Pr(\text{selected card is Red}).
+\]</span></p>
+<p>Simple enough, right? Trivial, even? It has to be <span class="math inline">\(p = 1/2\)</span>, because we have 52 cards, we shuffled the cards well, and the number of Hearts <span class="math inline">\(\heartsuit\)</span> plus Diamonds <span class="math inline">\(\diamondsuit\)</span> equals the number of Clubs <span class="math inline">\(\clubsuit\)</span> plus Spades <span class="math inline">\(\spadesuit\)</span>, so it couldn’t be anything other than <span class="math inline">\(1/2\)</span>, right?</p>
 </section>
-<section id="what" class="level2">
-<h2 class="anchored" data-anchor-id="what">What</h2>
-<p>I want this blog to be about statistics, plain and sample. No frills, no tomfoolery, just bare-boned statistics from beginning to end. Plus Emacs, ESS, Org-Mode, and R, but that goes without saying.</p>
-</section>
-<section id="when" class="level2">
-<h2 class="anchored" data-anchor-id="when">When</h2>
-<p>I’ve wanted to do this for a long time, but had as of yet convinced myself that I didn’t have time for it. A sabbatical coupled with the renewed energy of a <a href="http://www.warwick.ac.uk/statsdept/user-2011/">use R! conference</a> can change things considerably.</p>
-</section>
-<section id="how-emacs-org-mode-jekyll-github-blog-r" class="level2">
-<h2 class="anchored" data-anchor-id="how-emacs-org-mode-jekyll-github-blog-r">How: Emacs + Org mode + Jekyll + Github = Blog + R!</h2>
-<p>After much fiddling and googling I have managed to figure out how to run a blog entirely through Emacs and Git. If you’d like to do the same I recommend reading <a href="http://orgmode.org/worg/org-tutorials/org-jekyll.html">here</a> and <a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/">here</a>, with liberal doses of <a href="http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/">this</a> and <a href="https://github.com/mojombo/jekyll">that</a>. Ultimately, if you’d like to know how I do it then you can find the org-mode source code for this blog <a href="https://github.com/gjkerns/blog">here</a> and you can download the final result <a href="https://github.com/gjkerns/gjkerns.github.com">here</a> (which still is source code but is as close to final as possible).</p>
-<p>The bottom line: with this setup I can effortlessly do R code like this:</p>
+<section id="the-standard-deck" class="level1">
+<h1>The standard deck</h1>
+<p>Limiting attention to the standard deck that has been perfectly shuffled where the card is randomly selected is going to terminate our conversation pretty soon. Our prior distribution for <span class="math inline">\(p\)</span> will put 100% prior probability on the value <span class="math inline">\(\Pr(\text{Red}) = 1/2\)</span>, and all other values of <span class="math inline">\(p\)</span> will have prior probability zero. Here is what our prior distribution would look like in that case:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] -1.26005550 -0.24153330 -0.26270810  0.11929914 -0.05094026 -0.54149791
- [7]  0.51524809 -0.90041545  0.52012774 -0.23936052</code></pre>
-</div>
-</div>
-<p>And can include plots like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>) </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="at">xlab =</span> <span class="st">"p"</span>, <span class="at">ylab =</span> <span class="st">"prior"</span>, <span class="at">type =</span> <span class="st">"h"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-skiddaw" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-skiddaw-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: A plot to get things started.</figcaption><p></p>
-</figure>
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>What a boring prior! And the heck of it is, with a prior focused entirely on <span class="math inline">\(p = 1/2\)</span>, we are effectively ruling out any possible alternative value of <span class="math inline">\(p\)</span> and—as we will soon see—no measure of observed data could ever change our mind; we are doomed, therefore, prisoner to our own preconceived notions.</p>
+<p>We could spice it up a little bit by supposing that the deck is maybe not so perfectly shuffled, or maybe the selection isn’t entirely random, and we will go that way eventually, but before heading down that path let’s consider something else.</p>
+</section>
+<section id="what-if-the-deck-isnt-standard" class="level1">
+<h1>What if the deck isn’t standard?</h1>
+<p>Okay, so let’s suppose that we still have 52 cards, which still all belong to the usual ranks and suits, but maybe we can’t guarantee that the deck has exactly one each of the 52 representative cards. Say, for example, we dumped a whole bunch of decks into an inexplicably huge bucket, and then constructed our “deck” from the cards in the bucket.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> What would <span class="math inline">\(\Pr(\text{Red})\)</span> be now? How can we represent our prior beliefs about <span class="math inline">\(p\)</span> in this case?</p>
+<p>Here we can’t guarantee there are any red cards at all in our deck, let alone a proportion precise 50%. But what can we say? If we shuffle our deck well and do our best to select a card randomly, there are many plausible values for <span class="math inline">\(p\)</span>. If there are zero red cards, then <span class="math inline">\(p = 0\)</span>. If there are 52 red cards, then <span class="math inline">\(p\)</span> equals 1. And if there are 7 red cards, then <span class="math inline">\(p\)</span> will presumably be in the neighborhood of <span class="math inline">\(7/52\)</span>. So our “universe” of <span class="math inline">\(p\)</span> values are then <span class="math inline">\(0\)</span>, <span class="math inline">\(1/52\)</span>, <span class="math inline">\(2/52\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(1\)</span>—including 0, there are 53 grid values. In the absence of further information, a naive first guess (maybe we appeal to ignorance or symmetry) might distribute the prior probability uniformly over the possible values, like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p_grid <span class="ot">&lt;-</span> (<span class="dv">0</span><span class="sc">:</span><span class="dv">52</span>)<span class="sc">/</span><span class="dv">52</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>prior  <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">53</span>)<span class="sc">/</span><span class="dv">53</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p_grid, prior, <span class="at">type =</span> <span class="st">"h"</span>, <span class="at">xlab =</span> <span class="st">"p"</span>, <span class="at">ylab =</span> <span class="st">"prior"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(p_grid, prior, <span class="at">pch =</span> <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
-<p>all housed inside a simple, dynamic text file that I can edit with <a href="http://www.gnu.org/software/emacs/">Emacs</a> and can version-control with <a href="http://git-scm.com/">git</a>. On top of all this, I get LaTeX formatting in HTML via <a href="http://www.mathjax.org/">MathJax</a>. Life is good.</p>
+</div>
+<p>This is cool and all, but do we <em>really</em> believe that all possible values of <span class="math inline">\(p\)</span> are equally likely in our prior? That is, it’d take us a while drawing cards out of buckets to construct a deck with <em>all</em> red cards (<span class="math inline">\(p = 1\)</span>) or all black (<span class="math inline">\(p = 0\)</span>), and I don’t know that I want to work that hard. Actually, if we just randomly selected cards from the bucket we could guess that the value of <span class="math inline">\(p\)</span> is likely going to be somewhere not far from <span class="math inline">\(1/2\)</span>, but maybe above or below, something like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(p_grid, <span class="at">shape1 =</span> <span class="dv">9</span>, <span class="at">shape2 =</span> <span class="dv">9</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>prior  <span class="ot">&lt;-</span> y<span class="sc">/</span><span class="fu">sum</span>(y)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p_grid, prior, <span class="at">type =</span> <span class="st">"h"</span>, <span class="at">xlab =</span> <span class="st">"p"</span>, <span class="at">ylab =</span> <span class="st">"prior"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(p_grid, prior, <span class="at">pch =</span> <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>(Nothing special about the <code>shape1 = 9</code> and <code>shape2 = 9</code> above, just so they match to make the graph symmetric about <span class="math inline">\(p = 1/2\)</span>. It is fun to plug in different values for <code>shape1</code> and <code>shape2</code> to see how the graph changes.)</p>
+<p>The point isn’t that there is some unequivocally <strong>correct</strong> choice for what the prior has to be, the point is that we have the freedom to set the prior to whatever we <strong>want</strong> it to be, and the model has the flexibility to give us our heart’s desire. For instance, maybe we have an affinity for red cards, and we constructed the deck with purt’ nigh 70% red cards, but we weren’t very careful about it. We could choose our prior this way:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(p_grid, <span class="at">shape1 =</span> <span class="dv">700</span>, <span class="at">shape2 =</span> <span class="dv">300</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>prior  <span class="ot">&lt;-</span> y<span class="sc">/</span><span class="fu">sum</span>(y)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p_grid, prior, <span class="at">type =</span> <span class="st">"h"</span>, <span class="at">xlab =</span> <span class="st">"p"</span>, <span class="at">ylab =</span> <span class="st">"prior"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(p_grid, prior, <span class="at">pch =</span> <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>All of our prior probabilities on our <code>p_grid</code> are nonzero, so we have escaped our shackles of overconfidence, but we are also pretty dog-gone sure that <span class="math inline">\(\Pr(\text{Red})\)</span> is close to 70%.</p>
+<p>The prior possibilities are endless; we are limited by imagination only. A lot of Bayesian people/courses jump straight to the <code>dbeta</code> when introducing the one parameter problem (my course did), and not that there’s anything wrong with that, but I enjoy thinking about this example because it is concrete enough to get specific about what the proper interpretations of <code>p_grid</code> values are, and at the same time flexible/varied/robust enough to stomp out some useful ground in the space of priors that might be reasonable in a given problem.</p>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{jaykerns2011,
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This coming from a guy that doesn’t really care about cards, and only thinks about cards in the context of something/anything related to a probability course.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Note we are conveniently leaving out a description of how this construction is done.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{jaykerns2022,
   author = {G. Jay Kerns},
   editor = {},
-  title = {Maiden {Voyage}},
-  date = {2011-08-23},
-  url = {https://gjkerns.github.io/posts/2011-08-23-maiden},
+  title = {The Prior Possibilities Are Endless},
+  date = {2022-12-09},
+  url = {https://gjkerns.github.io/posts/2022-12-09-prior-possibilities-endless},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-jaykerns2011" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-G. Jay Kerns. 2011. <span>“Maiden Voyage.”</span> August 23, 2011. <a href="https://gjkerns.github.io/posts/2011-08-23-maiden">https://gjkerns.github.io/posts/2011-08-23-maiden</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-jaykerns2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+G. Jay Kerns. 2022. <span>“The Prior Possibilities Are Endless.”</span>
+December 9, 2022. <a href="https://gjkerns.github.io/posts/2022-12-09-prior-possibilities-endless">https://gjkerns.github.io/posts/2022-12-09-prior-possibilities-endless</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
