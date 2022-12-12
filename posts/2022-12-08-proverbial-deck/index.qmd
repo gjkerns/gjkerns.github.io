@@ -1,6 +1,6 @@
 ---
 title: "The proverbial deck of cards"
-description: "The cards we play with have been around for hundreds of years."
+description: "Pick a card, any card."
 date: "2022-12-08"
 categories: [bayesian, rstats]
 image: "53_cards.png"
