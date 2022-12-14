@@ -4,7 +4,7 @@ description: "Pick a card, any card."
 date: "2022-12-08"
 categories: [bayesian, rstats]
 image: "53_cards.png"
-draft: false
+draft: true
 ---
 
 ## Pick a card, any card
