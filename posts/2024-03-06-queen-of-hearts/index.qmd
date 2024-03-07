@@ -15,7 +15,7 @@ draft: false
 
 Local customs vary, but here is a general description: the 52 cards (plus 2 Jokers) of a standard deck of playing cards are well-shuffled and posted face down on a high-visibility surface (such as a wall in the local tavern).
 
-Players buy tickets, as many as they want, for \$1 each and fill in their names, phone numbers and the number, 1 to 54, of the card (or joker) they want flipped. Every week, one and only one ticket is drawn and the card---one of 54---is taped to a board with the corresponding number flipped over. If it’s the queen of hearts, the owner of the ticket wins the pot. If not, the money stays in the pot and the process starts all over again the next week \[with the remaining unflipped cards\].
+Players buy tickets, as many as they want, for \$1 each and fill in their names, phone numbers and the number, 1 to 54, of the card (or joker) they want flipped. Every week, one and only one ticket is drawn and the card---one of 54---is taped to a board with the corresponding number flipped over. If it’s the queen of hearts, the owner of the ticket wins the pot. If not, the money stays in the pot and the process starts all over again the next week [with the remaining unflipped cards].
 
 **Source:** [Business Journal Daily](http://businessjournaldaily.com/barry-dyngles-finds-queen-of-hearts-quite-a-draw/)
 
@@ -30,61 +30,63 @@ Finally, we suppose that nobody has x-ray vision.
 # Location of the Queen of Hearts
 
 After $m$ weeks of lost games, the Queen of Hearts is equally likely to be located at any one of the remaining $k$ cards. To see why, let $X$ denote the random location of the Queen of Hearts. When $k = 54$, then $\Pr(X=x) = 1/54$, $x = 1,2,\ldots,54$ since the deck was well-shuffled. Suppose in week one the chosen ticket was $x_{1}$, and suppose that ticket was a loser. Given the information $X \neq x_{1}$, the conditional distribution of $X$ is 
-\[ 
+$$ 
 \Pr(X = x,\vert,X\neq x_{1}) = \frac{\Pr(X = x)}{\Pr(X \neq x_{1})} = \frac{1/54}{53/54} = \frac{1}{53},\quad x = 1,2,\ldots,54,\quad x \neq x_{1}.
-\]
+$$
 
 Continuing in this fashion, 
-\[ 
+$$ 
 \Pr(X = x,\vert,X\neq x_{1},\ldots,x_{m}) = \frac{\Pr(X = x)}{\Pr(X \neq x_{1},\ldots,x_{m})} = \frac{1/54}{(54 - m)/54} = \frac{1}{k},\quad x = 1,2,\ldots,54,\quad x \neq x_{1},\ldots,x_{m}.\
-\]
+$$
 
 # Probability that somebody wins this week
 
-There is a 100% chance that somebody's ticket will be selected. That ticket will have a number on it, and that number will match the random location of the Queen of Hearts a proportion $1/k$ of the time$\ldots$ no x-ray vision, remember? That means \[ \Pr(\text{Somebody wins}) = \Pr(\text{Number matches}) = \frac{1}{k}.\
-\]
+There is a 100% chance that somebody's ticket will be selected. That ticket will have a number on it, and that number will match the random location of the Queen of Hearts a proportion $1/k$ of the time$\ldots$ no x-ray vision, remember? That means 
+$$
+\Pr(\text{Somebody wins}) = \Pr(\text{Number matches}) = \frac{1}{k}.\
+$$
 
 # Probability that *you* win this week
 
 There are $N + n$ total tickets in the pot, $n$ of which with your name on it. Assuming a well-mixed pot, the probability that one of your tickets is selected is 
-\[ 
+$$ 
 \Pr(\text{Your ticket selected}) = \frac{n}{N + n}.\
-\]
+$$
 
 Given that your ticket is selected, you have probability $\Pr(\text{Number matches}) = 1/k$ that your number matches. Therefore, the probability that you win is 
-\[ 
+$$ 
 \Pr(\text{You win}) = \Pr(\text{Your ticket selected} \cap \text{Number matches}) = \frac{n}{k(N + n)}.
-\]
+$$
 
 # Odds against your winning
 
 If we write $p = \frac{n}{N + n} \cdot \frac{1}{k}$ then 
-\[
+$$
 \text{Odds against you} = \frac{1 - p}{p} = \frac{kN + (k - 1)n}{n}.
-\]
+$$
 
 # Probability that the game lasts this long
 
 The game ends exactly when somebody wins, and we saw earlier that when there are $k$ tickets left, the probability that somebody wins is $1/k$. Let $L$ denote the length of the game. Then $L$ can be any number $1,2,\ldots,54$. But $\Pr(L = 1)$ is 
-\[ 
+$$ 
 \Pr(L = 1) = \Pr( \text{Somebody wins when }k\text{ is 54}) = \frac{1}{54}.
-\]
+$$
 
 Now, in order for $L = 2$ it must be that nobody wins the first week (with probability $53/54$), and then somebody wins the second week (with probability $1/53$). Thus 
-\[
+$$
 \Pr(L = 2) = \frac{53}{54}\cdot \frac{1}{53} = \frac{1}{54}. 
-\]
+$$
 
 By the same reasoning, 
-\[
+$$
 \Pr(L = 3) = \frac{53}{54}\cdot \frac{52}{53} \cdot \frac{1}{52} = \frac{1}{54}, 
-\]
+$$
 and so forth. In other words, the outcomes $L = 1,2,3,\ldots,54$ are equally likely.
 
 With the above in mind, we may ask questions like, "What are the chances the game will continue until there are at most 7 cards left?" This is 
-\[
+$$
 \Pr(L \geq 48) = \frac{7}{54} \approx 0.1296296,
-\] 
+$$ 
 or almost a 13% chance.
 
 # It lasted this long, how much longer?
@@ -95,20 +97,20 @@ $2/7 \approx 0.2857143$.
 # Expected winnings
 
 Suppose you only started playing the game this week. Denote your winnings by $W$, where we understand that if you lose then your winnings are negative. You spent $\$n$ on tickets, but you will have $\$(J + N + n)$ if you win. Your expected winnings are 
-\[ 
+$$ 
 \mathbb{E}(W) = -n \Pr(\text{Lose}) + (J + N + n)\Pr(\text{Win}), 
-\] 
+$$ 
 and after plugging in the formulas from above we get 
-\[
+$$
 \mathbb{E}(W) = -n \left( 1 - \frac{n}{k(N + n)}\right) + (J + N + n)\left( \frac{n}{k(N + n)} \right).
-\]
+$$
 
 # But what if I played earlier weeks, too?
 
 Let's say you bought $n^{\ast}$ tickets prior to this week's game. Then after your $n$ tickets this week you've invested $n + n^{\ast}$ total dollars in the game which you stand to lose. The $n^{\ast}$ is already contained in the $J$ dollars above, because that money carries through from week to week. Your probability of winning this week doesn't change. Your (smaller) expected winnings are 
-\[
+$$
 \mathbb{E}(W) = -(n + n\^{\ast}) \left( 1 - \frac{n}{k(N + n)}\right) + (J + N + n)\left( \frac{n}{k(N + n)} \right).
-\]
+$$
 
 # Expected winnings per dollar
 
