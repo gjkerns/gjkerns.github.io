@@ -1,6 +1,6 @@
 ---
 title: "The Queen of Hearts"
-description: "Quick look at an intriguing game."
+description: "A quick look at an intriguing raffle game."
 date: "2024-03-06"
 categories: [probability, classical]
 image: preview.jpg
@@ -9,7 +9,7 @@ twitter-card:
 draft: false
 ---
 
-![The Queen](preview.jpg "The Queen of Hearts"){.preview-image}
+![The Queen of Hearts. Source: [favpng.com](https://img.favpng.com/4/10/10/queen-of-hearts-playing-card-stock-photography-png-favpng-iXdcRx6K22ngYDUxhZ7DaSYfu.jpg)](preview.jpg "The Queen of Hearts"){.preview-image}
 
 # Rules of the game
 
