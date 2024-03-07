@@ -2,7 +2,7 @@
 title: "The Queen of Hearts"
 description: "Quick look at an intriguing game."
 date: "2024-03-06"
-categories: [news, probability, classical]
+categories: [probability, classical]
 image: preview.jpg
 twitter-card: 
   image: preview.jpg
@@ -36,8 +36,9 @@ $$
 
 Continuing in this fashion, 
 $$ 
-\Pr(X = x,\vert,X\neq x_{1},\ldots,x_{m}) = \frac{\Pr(X = x)}{\Pr(X \neq x_{1},\ldots,x_{m})} = \frac{1/54}{(54 - m)/54} = \frac{1}{k},\quad x = 1,2,\ldots,54,\quad x \neq x_{1},\ldots,x_{m}.\
+\Pr(X = x,\vert,X\neq x_{1},\ldots,x_{m}) = \frac{\Pr(X = x)}{\Pr(X \neq x_{1},\ldots,x_{m})} = \frac{1/54}{(54 - m)/54} = \frac{1}{k},
 $$
+for $x = 1,2,\ldots,54$ and $x \neq x_{1},\ldots,x_{m}$.
 
 # Probability that somebody wins this week
 

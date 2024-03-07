@@ -41,7 +41,7 @@
 <section id="location-of-the-queen-of-hearts" class="level1">
 <h1>Location of the Queen of Hearts</h1>
 <p>After <img src="https://latex.codecogs.com/png.latex?m"> weeks of lost games, the Queen of Hearts is equally likely to be located at any one of the remaining <img src="https://latex.codecogs.com/png.latex?k"> cards. To see why, let <img src="https://latex.codecogs.com/png.latex?X"> denote the random location of the Queen of Hearts. When <img src="https://latex.codecogs.com/png.latex?k%20=%2054">, then <img src="https://latex.codecogs.com/png.latex?%5CPr(X=x)%20=%201/54">, <img src="https://latex.codecogs.com/png.latex?x%20=%201,2,%5Cldots,54"> since the deck was well-shuffled. Suppose in week one the chosen ticket was <img src="https://latex.codecogs.com/png.latex?x_%7B1%7D">, and suppose that ticket was a loser. Given the information <img src="https://latex.codecogs.com/png.latex?X%20%5Cneq%20x_%7B1%7D">, the conditional distribution of <img src="https://latex.codecogs.com/png.latex?X"> is <img src="https://latex.codecogs.com/png.latex?%0A%5CPr(X%20=%20x,%5Cvert,X%5Cneq%20x_%7B1%7D)%20=%20%5Cfrac%7B%5CPr(X%20=%20x)%7D%7B%5CPr(X%20%5Cneq%20x_%7B1%7D)%7D%20=%20%5Cfrac%7B1/54%7D%7B53/54%7D%20=%20%5Cfrac%7B1%7D%7B53%7D,%5Cquad%20x%20=%201,2,%5Cldots,54,%5Cquad%20x%20%5Cneq%20x_%7B1%7D.%0A"></p>
-<p>Continuing in this fashion, <img src="https://latex.codecogs.com/png.latex?%0A%5CPr(X%20=%20x,%5Cvert,X%5Cneq%20x_%7B1%7D,%5Cldots,x_%7Bm%7D)%20=%20%5Cfrac%7B%5CPr(X%20=%20x)%7D%7B%5CPr(X%20%5Cneq%20x_%7B1%7D,%5Cldots,x_%7Bm%7D)%7D%20=%20%5Cfrac%7B1/54%7D%7B(54%20-%20m)/54%7D%20=%20%5Cfrac%7B1%7D%7Bk%7D,%5Cquad%20x%20=%201,2,%5Cldots,54,%5Cquad%20x%20%5Cneq%20x_%7B1%7D,%5Cldots,x_%7Bm%7D.%5C%0A"></p>
+<p>Continuing in this fashion, <img src="https://latex.codecogs.com/png.latex?%0A%5CPr(X%20=%20x,%5Cvert,X%5Cneq%20x_%7B1%7D,%5Cldots,x_%7Bm%7D)%20=%20%5Cfrac%7B%5CPr(X%20=%20x)%7D%7B%5CPr(X%20%5Cneq%20x_%7B1%7D,%5Cldots,x_%7Bm%7D)%7D%20=%20%5Cfrac%7B1/54%7D%7B(54%20-%20m)/54%7D%20=%20%5Cfrac%7B1%7D%7Bk%7D,%0A"> for <img src="https://latex.codecogs.com/png.latex?x%20=%201,2,%5Cldots,54"> and <img src="https://latex.codecogs.com/png.latex?x%20%5Cneq%20x_%7B1%7D,%5Cldots,x_%7Bm%7D">.</p>
 </section>
 <section id="probability-that-somebody-wins-this-week" class="level1">
 <h1>Probability that somebody wins this week</h1>
@@ -97,7 +97,6 @@
 Jay Kerns, G. 2024. <span>“The Queen of Hearts.”</span> March 6, 2024.
 <a href="https://gjkerns.github.io/posts/2024-03-06-queen-of-hearts">https://gjkerns.github.io/posts/2024-03-06-queen-of-hearts</a>.
 </div></div></section></div> ]]></description>
-  <category>news</category>
   <category>probability</category>
   <category>classical</category>
   <guid>https://gjkerns.github.io/posts/2024-03-06-queen-of-hearts/index.html</guid>
