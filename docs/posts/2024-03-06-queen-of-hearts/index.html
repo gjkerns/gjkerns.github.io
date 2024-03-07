@@ -146,6 +146,8 @@ ul.task-list li input[type="checkbox"] {
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">news</div>
+                <div class="quarto-category">probability</div>
+                <div class="quarto-category">classical</div>
               </div>
                   </div>
   </div>
@@ -201,8 +203,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="location-of-the-queen-of-hearts" class="level1">
 <h1>Location of the Queen of Hearts</h1>
-<p>After <span class="math inline">\(m\)</span> weeks of lost games, the Queen of Hearts is equally likely to be located at any one of the remaining <span class="math inline">\(k\)</span> cards. To see why, let <span class="math inline">\(X\)</span> denote the random location of the Queen of Hearts. When <span class="math inline">\(k = 54\)</span>, then <span class="math inline">\(\Pr(X=x) = 1/54\)</span>, <span class="math inline">\(x = 1,2,\ldots,54\)</span> since the deck was well-shuffled. Suppose in week one the chosen ticket was <span class="math inline">\(x_{1}\)</span>, and suppose that ticket was a loser. Given the information <span class="math inline">\(X \neq x_{1}\)</span>, the conditional distribution of <span class="math inline">\(X\)</span> is [ (X = x,,Xx_{1}) = = = ,x = 1,2,,54,x x_{1}.<br>
-]</p>
+<p>After <span class="math inline">\(m\)</span> weeks of lost games, the Queen of Hearts is equally likely to be located at any one of the remaining <span class="math inline">\(k\)</span> cards. To see why, let <span class="math inline">\(X\)</span> denote the random location of the Queen of Hearts. When <span class="math inline">\(k = 54\)</span>, then <span class="math inline">\(\Pr(X=x) = 1/54\)</span>, <span class="math inline">\(x = 1,2,\ldots,54\)</span> since the deck was well-shuffled. Suppose in week one the chosen ticket was <span class="math inline">\(x_{1}\)</span>, and suppose that ticket was a loser. Given the information <span class="math inline">\(X \neq x_{1}\)</span>, the conditional distribution of <span class="math inline">\(X\)</span> is [ (X = x,,Xx_{1}) = = = ,x = 1,2,,54,x x_{1}. ]</p>
 <p>Continuing in this fashion, [ (X = x,,Xx_{1},,x_{m}) = = = ,x = 1,2,,54,x x_{1},,x_{m}.<br>
 ]</p>
 </section>
@@ -215,8 +216,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Probability that <em>you</em> win this week</h1>
 <p>There are <span class="math inline">\(N + n\)</span> total tickets in the pot, <span class="math inline">\(n\)</span> of which with your name on it. Assuming a well-mixed pot, the probability that one of your tickets is selected is [ () = .<br>
 ]</p>
-<p>Given that your ticket is selected, you have probability <span class="math inline">\(\Pr(\text{Number matches}) = 1/k\)</span> that your number matches. Therefore, the probability that you win is [ ()= ( ) = .<br>
-]</p>
+<p>Given that your ticket is selected, you have probability <span class="math inline">\(\Pr(\text{Number matches}) = 1/k\)</span> that your number matches. Therefore, the probability that you win is [ () = ( ) = . ]</p>
 </section>
 <section id="odds-against-your-winning" class="level1">
 <h1>Odds against your winning</h1>
@@ -224,8 +224,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="probability-that-the-game-lasts-this-long" class="level1">
 <h1>Probability that the game lasts this long</h1>
-<p>The game ends exactly when somebody wins, and we saw earlier that when there are <span class="math inline">\(k\)</span> tickets left, the probability that somebody wins is <span class="math inline">\(1/k\)</span>. Let <span class="math inline">\(L\)</span> denote the length of the game. Then <span class="math inline">\(L\)</span> can be any number <span class="math inline">\(1,2,\ldots,54\)</span>. But <span class="math inline">\(\Pr(L = 1)\)</span> is [ (L = 1) = ( k) = .<br>
-]</p>
+<p>The game ends exactly when somebody wins, and we saw earlier that when there are <span class="math inline">\(k\)</span> tickets left, the probability that somebody wins is <span class="math inline">\(1/k\)</span>. Let <span class="math inline">\(L\)</span> denote the length of the game. Then <span class="math inline">\(L\)</span> can be any number <span class="math inline">\(1,2,\ldots,54\)</span>. But <span class="math inline">\(\Pr(L = 1)\)</span> is [ (L = 1) = ( k) = . ]</p>
 <p>Now, in order for <span class="math inline">\(L = 2\)</span> it must be that nobody wins the first week (with probability <span class="math inline">\(53/54\)</span>), and then somebody wins the second week (with probability <span class="math inline">\(1/53\)</span>). Thus [ (L = 2) = = . ]</p>
 <p>By the same reasoning, [ (L = 3) = = , ] and so forth. In other words, the outcomes <span class="math inline">\(L = 1,2,3,\ldots,54\)</span> are equally likely.</p>
 <p>With the above in mind, we may ask questions like, “What are the chances the game will continue until there are at most 7 cards left?” This is [ (L ) = , ] or almost a 13% chance.</p>

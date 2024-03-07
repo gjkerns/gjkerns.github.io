@@ -40,8 +40,7 @@
 </section>
 <section id="location-of-the-queen-of-hearts" class="level1">
 <h1>Location of the Queen of Hearts</h1>
-<p>After <img src="https://latex.codecogs.com/png.latex?m"> weeks of lost games, the Queen of Hearts is equally likely to be located at any one of the remaining <img src="https://latex.codecogs.com/png.latex?k"> cards. To see why, let <img src="https://latex.codecogs.com/png.latex?X"> denote the random location of the Queen of Hearts. When <img src="https://latex.codecogs.com/png.latex?k%20=%2054">, then <img src="https://latex.codecogs.com/png.latex?%5CPr(X=x)%20=%201/54">, <img src="https://latex.codecogs.com/png.latex?x%20=%201,2,%5Cldots,54"> since the deck was well-shuffled. Suppose in week one the chosen ticket was <img src="https://latex.codecogs.com/png.latex?x_%7B1%7D">, and suppose that ticket was a loser. Given the information <img src="https://latex.codecogs.com/png.latex?X%20%5Cneq%20x_%7B1%7D">, the conditional distribution of <img src="https://latex.codecogs.com/png.latex?X"> is [ (X = x,,Xx_{1}) = = = ,x = 1,2,,54,x x_{1}.<br>
-]</p>
+<p>After <img src="https://latex.codecogs.com/png.latex?m"> weeks of lost games, the Queen of Hearts is equally likely to be located at any one of the remaining <img src="https://latex.codecogs.com/png.latex?k"> cards. To see why, let <img src="https://latex.codecogs.com/png.latex?X"> denote the random location of the Queen of Hearts. When <img src="https://latex.codecogs.com/png.latex?k%20=%2054">, then <img src="https://latex.codecogs.com/png.latex?%5CPr(X=x)%20=%201/54">, <img src="https://latex.codecogs.com/png.latex?x%20=%201,2,%5Cldots,54"> since the deck was well-shuffled. Suppose in week one the chosen ticket was <img src="https://latex.codecogs.com/png.latex?x_%7B1%7D">, and suppose that ticket was a loser. Given the information <img src="https://latex.codecogs.com/png.latex?X%20%5Cneq%20x_%7B1%7D">, the conditional distribution of <img src="https://latex.codecogs.com/png.latex?X"> is [ (X = x,,Xx_{1}) = = = ,x = 1,2,,54,x x_{1}. ]</p>
 <p>Continuing in this fashion, [ (X = x,,Xx_{1},,x_{m}) = = = ,x = 1,2,,54,x x_{1},,x_{m}.<br>
 ]</p>
 </section>
@@ -54,8 +53,7 @@
 <h1>Probability that <em>you</em> win this week</h1>
 <p>There are <img src="https://latex.codecogs.com/png.latex?N%20+%20n"> total tickets in the pot, <img src="https://latex.codecogs.com/png.latex?n"> of which with your name on it. Assuming a well-mixed pot, the probability that one of your tickets is selected is [ () = .<br>
 ]</p>
-<p>Given that your ticket is selected, you have probability <img src="https://latex.codecogs.com/png.latex?%5CPr(%5Ctext%7BNumber%20matches%7D)%20=%201/k"> that your number matches. Therefore, the probability that you win is [ ()= ( ) = .<br>
-]</p>
+<p>Given that your ticket is selected, you have probability <img src="https://latex.codecogs.com/png.latex?%5CPr(%5Ctext%7BNumber%20matches%7D)%20=%201/k"> that your number matches. Therefore, the probability that you win is [ () = ( ) = . ]</p>
 </section>
 <section id="odds-against-your-winning" class="level1">
 <h1>Odds against your winning</h1>
@@ -63,8 +61,7 @@
 </section>
 <section id="probability-that-the-game-lasts-this-long" class="level1">
 <h1>Probability that the game lasts this long</h1>
-<p>The game ends exactly when somebody wins, and we saw earlier that when there are <img src="https://latex.codecogs.com/png.latex?k"> tickets left, the probability that somebody wins is <img src="https://latex.codecogs.com/png.latex?1/k">. Let <img src="https://latex.codecogs.com/png.latex?L"> denote the length of the game. Then <img src="https://latex.codecogs.com/png.latex?L"> can be any number <img src="https://latex.codecogs.com/png.latex?1,2,%5Cldots,54">. But <img src="https://latex.codecogs.com/png.latex?%5CPr(L%20=%201)"> is [ (L = 1) = ( k) = .<br>
-]</p>
+<p>The game ends exactly when somebody wins, and we saw earlier that when there are <img src="https://latex.codecogs.com/png.latex?k"> tickets left, the probability that somebody wins is <img src="https://latex.codecogs.com/png.latex?1/k">. Let <img src="https://latex.codecogs.com/png.latex?L"> denote the length of the game. Then <img src="https://latex.codecogs.com/png.latex?L"> can be any number <img src="https://latex.codecogs.com/png.latex?1,2,%5Cldots,54">. But <img src="https://latex.codecogs.com/png.latex?%5CPr(L%20=%201)"> is [ (L = 1) = ( k) = . ]</p>
 <p>Now, in order for <img src="https://latex.codecogs.com/png.latex?L%20=%202"> it must be that nobody wins the first week (with probability <img src="https://latex.codecogs.com/png.latex?53/54">), and then somebody wins the second week (with probability <img src="https://latex.codecogs.com/png.latex?1/53">). Thus [ (L = 2) = = . ]</p>
 <p>By the same reasoning, [ (L = 3) = = , ] and so forth. In other words, the outcomes <img src="https://latex.codecogs.com/png.latex?L%20=%201,2,3,%5Cldots,54"> are equally likely.</p>
 <p>With the above in mind, we may ask questions like, “What are the chances the game will continue until there are at most 7 cards left?” This is [ (L ) = , ] or almost a 13% chance.</p>
@@ -104,6 +101,8 @@ Jay Kerns, G. 2024. <span>“The Queen of Hearts.”</span> March 6, 2024.
 <a href="https://gjkerns.github.io/posts/2024-03-06-queen-of-hearts">https://gjkerns.github.io/posts/2024-03-06-queen-of-hearts</a>.
 </div></div></section></div> ]]></description>
   <category>news</category>
+  <category>probability</category>
+  <category>classical</category>
   <guid>https://gjkerns.github.io/posts/2024-03-06-queen-of-hearts/index.html</guid>
   <pubDate>Wed, 06 Mar 2024 05:00:00 GMT</pubDate>
   <media:content url="https://gjkerns.github.io/posts/2024-03-06-queen-of-hearts/preview.jpg" medium="image" type="image/jpeg"/>
