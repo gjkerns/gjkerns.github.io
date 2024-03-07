@@ -9,7 +9,7 @@ website:
   favicon: favicon.ico
   twitter-card: true
   open-graph: true
-  page-footer: "Copyright 2022, G. Jay Kerns"
+  page-footer: "Copyright 2024, G. Jay Kerns"
   navbar:
     right:
       - about.qmd
