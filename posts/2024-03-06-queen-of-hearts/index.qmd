@@ -31,9 +31,10 @@ Finally, we suppose that nobody has x-ray vision.
 
 After $m$ weeks of lost games, the Queen of Hearts is equally likely to be located at any one of the remaining $k$ cards. To see why, let $X$ denote the random location of the Queen of Hearts. When $k = 54$, then $\Pr(X=x) = 1/54$, $x = 1,2,\ldots,54$ since the deck was well-shuffled. Suppose in week one the chosen ticket was $x_{1}$, and suppose that ticket was a loser. Given the information $X \neq x_{1}$, the conditional distribution of $X$ is 
 $$ 
-\Pr(X = x,\vert,X\neq x_{1}) = \frac{\Pr(X = x)}{\Pr(X \neq x_{1})} = \frac{1/54}{53/54} = \frac{1}{53},\quad x = 1,2,\ldots,54,\quad x \neq x_{1}.
+\Pr(X = x,\vert,X\neq x_{1}) = \frac{\Pr(X = x)}{\Pr(X \neq x_{1})} = \frac{1/54}{53/54} = \frac{1}{53},
 $$
 
+for $x = 1,2,\ldots,54$ and $x \neq x_{1}$.
 Continuing in this fashion, 
 $$ 
 \Pr(X = x,\vert,X\neq x_{1},\ldots,x_{m}) = \frac{\Pr(X = x)}{\Pr(X \neq x_{1},\ldots,x_{m})} = \frac{1/54}{(54 - m)/54} = \frac{1}{k},
@@ -68,7 +69,7 @@ $$
 
 # Probability that the game lasts this long
 
-The game ends exactly when somebody wins, and we saw earlier that when there are $k$ tickets left, the probability that somebody wins is $1/k$. Let $L$ denote the length of the game. Then $L$ can be any number $1,2,\ldots,54$. But $\Pr(L = 1)$ is 
+The game ends exactly when somebody wins, and we saw earlier that when there are $k$ cards left, the probability that somebody wins is $1/k$. Let $L$ denote the length of the game. Then $L$ can be any number $1,2,\ldots,54$. But $\Pr(L = 1)$ is 
 $$ 
 \Pr(L = 1) = \Pr( \text{Somebody wins when }k\text{ is 54}) = \frac{1}{54}.
 $$
@@ -97,7 +98,7 @@ $2/7 \approx 0.2857143$.
 
 # Expected winnings
 
-Suppose you only started playing the game this week. Denote your winnings by $W$, where we understand that if you lose then your winnings are negative. You spent $\$n$ on tickets, but you will have $\$(J + N + n)$ if you win. Your expected winnings are 
+Suppose you only started playing the game this week. Denote your winnings by $W$, where we understand that if you lose then your winnings are negative. You spent $n$ dollars on tickets, but you will have $\$(J + N + n)$ if you win. Your expected winnings are 
 $$ 
 \mathbb{E}(W) = -n \Pr(\text{Lose}) + (J + N + n)\Pr(\text{Win}), 
 $$ 
@@ -110,7 +111,7 @@ $$
 
 Let's say you bought $n^{\ast}$ tickets prior to this week's game. Then after your $n$ tickets this week you've invested $n + n^{\ast}$ total dollars in the game which you stand to lose. The $n^{\ast}$ is already contained in the $J$ dollars above, because that money carries through from week to week. Your probability of winning this week doesn't change. Your (smaller) expected winnings are 
 $$
-\mathbb{E}(W) = -(n + n\^{\ast}) \left( 1 - \frac{n}{k(N + n)}\right) + (J + N + n)\left( \frac{n}{k(N + n)} \right).
+\mathbb{E}(W) = -(n + n^{\ast}) \left( 1 - \frac{n}{k(N + n)}\right) + (J + N + n)\left( \frac{n}{k(N + n)} \right).
 $$
 
 # Expected winnings per dollar
