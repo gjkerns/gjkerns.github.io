@@ -1,6 +1,6 @@
 ---
 title: "The Queen of Hearts"
-description: "A quick look at an intriguing raffle game."
+description: "A quick look at a neat raffle game."
 date: "2024-03-06"
 categories: [probability, classical]
 image: preview.jpg
