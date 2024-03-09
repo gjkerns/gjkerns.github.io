@@ -1,0 +1,50 @@
+---
+title: "MathFest Scheduling with Integer Programming"
+description: "A case study."
+date: "2024-03-06"
+categories: [operations research]
+image: preview.jpg
+twitter-card: 
+  image: preview.jpg
+draft: false
+---
+
+![The Queen of Hearts. Source: [favpng.com](https://img.favpng.com/4/10/10/queen-of-hearts-playing-card-stock-photography-png-favpng-iXdcRx6K22ngYDUxhZ7DaSYfu.jpg)](preview.jpg "The Queen of Hearts"){.preview-image}
+
+# The setup
+
+# The problem
+
+
+You can also embed plots, for example:
+
+```{r}
+library(plotly)
+mtcars$am[which(mtcars$am == 0)] <- 'Automatic'
+mtcars$am[which(mtcars$am == 1)] <- 'Manual'
+mtcars$am <- as.factor(mtcars$am)
+fig <- plot_ly(mtcars, x = ~wt, y = ~hp, z = ~qsec, color = ~am, colors = c('#BF382A', '#0C4B8E'))
+fig <- fig %>% add_markers()
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Weight'),
+                                   yaxis = list(title = 'Gross horsepower'),
+                                   zaxis = list(title = '1/4 mile time')))
+fig
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# Early solutions
+
+The first early solution to the problem was... do it by hand.  I can only imagine what a nightmare that would have been trying to schedule 300 students in workshops that they wanted to see.
+
+# The program
+
+Here are the steps of the program.
+
+1. Go sequentially by student.
+2. Check their 1st ranked workshop. If there is still room in Workshop I, then assign the student there.
+3. If there is no room in Workshop I, then check Workshop II.  If there is still room, then assign the student there.
+4. If both Workshop I and II are full in their 1st choice, then go to their 2nd ranked workshop and start over.
+5. Continue in this fashion until 
+
+
